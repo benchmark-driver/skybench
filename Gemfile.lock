@@ -38,11 +38,6 @@ GIT
       uglifier (~> 3.0)
 
 PATH
-  remote: /home/k0kubun/src/github.com/k0kubun/benchmark_driver
-  specs:
-    benchmark_driver (0.8.5)
-
-PATH
   remote: benchmark-output-skybench
   specs:
     benchmark-output-skybench (0.1.0)
@@ -60,6 +55,7 @@ GEM
     autoprefixer-rails (7.2.5)
       execjs
     backports (3.11.1)
+    benchmark_driver (0.8.6)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -127,7 +123,7 @@ PLATFORMS
 
 DEPENDENCIES
   benchmark-output-skybench!
-  benchmark_driver!
+  benchmark_driver
   bootstrap-sass
   middleman!
   middleman-autoprefixer
