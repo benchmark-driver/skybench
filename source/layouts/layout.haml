@@ -9,4 +9,12 @@
     = stylesheet_link_tag 'site'
     = javascript_include_tag 'site'
   %body
-    = yield
+    %nav.navbar
+      .container
+        = link_to 'benchmark-driver.github.io', '/', class: 'navbar-brand'
+        .collapse.navbar-collapse
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              = link_to 'Benchmarks', '/'
+    .container
+      = yield
