@@ -1,28 +1,46 @@
-.text-center
-  %h1 MJIT Benchmarks
+:ruby
+  require 'json'
+  require 'yaml'
 
-  #bm_app_erb{ style: 'width: 70%; margin: 0 auto;', height: '400px;' }
+  yaml = File.expand_path('../../results/mjit.yml', __dir__)
+  data = YAML.load_file(yaml)
+
+  versions = data.fetch('ruby')
+  results  = data.fetch('results')
+
+.benchmark_page
+  .text-center
+    %h1 MJIT Benchmarks
+
+  #graph_metadata{ 'data-versions': versions.to_json }
+  - results.each do |name, values|
+    .benchmark_graph{ id: name, 'data-values': values.to_json }
 
 :javascript
   $(function () {
-    var myChart = Highcharts.chart('bm_app_erb', {
-      chart: {
-        type: 'column'
-      },
-      title: {
-        text: 'bm_app_erb'
-      },
-      yAxis: {
+    var versions = $('#graph_metadata').data('versions');
+
+    $('.benchmark_graph').each(function() {
+      var id = $(this).attr('id');
+      Highcharts.chart(id, {
+        chart: {
+          type: 'column'
+        },
         title: {
-          text: 'Seconds'
-        }
-      },
-      xAxis: {
-        categories: ['2.0.0', '2.1.8', '2.2.4', '2.3.0', '2.4.0', '2.5.0']
-      },
-      series: [{
-        name: 'bm_app_erb',
-        data: [1.4, 2.4, 4.4, 4.4, 8.4, 2.4]
-      }]
+          text: id
+        },
+        yAxis: {
+          title: {
+            text: 'Seconds'
+          }
+        },
+        xAxis: {
+          categories: versions
+        },
+        series: [{
+          name: id,
+          data: $(this).data('values')
+        }]
+      });
     });
   });
