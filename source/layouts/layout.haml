@@ -15,6 +15,12 @@
         .collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
             %li
-              = link_to 'Benchmarks', '/'
+              = link_to 'Benchmarks', '/benchmarks.html'
     .container
       = yield
+
+    %footer.footer
+      .container.text-center
+        %p.text-muted
+          Developed by #{link_to '@k0kubun', 'https://github.com/k0kubun'}.
+          See the source code at #{link_to 'https://github.com/benchmark-driver/benchmark-driver.github.io'}.
