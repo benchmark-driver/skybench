@@ -38,6 +38,11 @@ GIT
       uglifier (~> 3.0)
 
 PATH
+  remote: /home/k0kubun/src/github.com/k0kubun/benchmark_driver
+  specs:
+    benchmark_driver (0.8.5)
+
+PATH
   remote: benchmark-output-skybench
   specs:
     benchmark-output-skybench (0.1.0)
@@ -55,10 +60,10 @@ GEM
     autoprefixer-rails (7.2.5)
       execjs
     backports (3.11.1)
-    benchmark_driver (0.8.5)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
+    coderay (1.1.2)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -85,6 +90,7 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     memoist (0.16.0)
+    method_source (0.9.0)
     middleman-autoprefixer (2.8.0)
       autoprefixer-rails (>= 7.0.1, < 8.0.0)
       middleman-core (>= 3.3.3)
@@ -96,6 +102,9 @@ GEM
     padrino-support (0.13.3.4)
       activesupport (>= 3.1)
     parallel (1.12.1)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
     public_suffix (3.0.1)
     rack (2.0.3)
     rake (12.3.0)
@@ -118,10 +127,11 @@ PLATFORMS
 
 DEPENDENCIES
   benchmark-output-skybench!
-  benchmark_driver
+  benchmark_driver!
   bootstrap-sass
   middleman!
   middleman-autoprefixer
+  pry
   rake
 
 BUNDLED WITH
