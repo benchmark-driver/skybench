@@ -52,13 +52,8 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
-    autoprefixer-rails (7.2.5)
-      execjs
     backports (3.11.1)
     benchmark_driver (0.8.6)
-    bootstrap-sass (3.3.7)
-      autoprefixer-rails (>= 5.2.1)
-      sass (>= 3.3.4)
     coderay (1.1.2)
     coffee-script (2.4.1)
       coffee-script-source
@@ -87,9 +82,6 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
     memoist (0.16.0)
     method_source (0.9.0)
-    middleman-autoprefixer (2.8.0)
-      autoprefixer-rails (>= 7.0.1, < 8.0.0)
-      middleman-core (>= 3.3.3)
     minitest (5.11.3)
     padrino-helpers (0.13.3.4)
       i18n (~> 0.6, >= 0.6.7)
@@ -124,9 +116,7 @@ PLATFORMS
 DEPENDENCIES
   benchmark-output-skybench!
   benchmark_driver
-  bootstrap-sass
   middleman!
-  middleman-autoprefixer
   pry
   rake
 

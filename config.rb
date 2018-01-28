@@ -3,10 +3,6 @@
 
 set :haml, format: :html5
 
-activate :autoprefixer do |prefix|
-  prefix.browsers = "last 2 versions"
-end
-
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
