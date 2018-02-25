@@ -9,6 +9,7 @@ class BenchmarkDriver::Output::Skybench
   def initialize(jobs:, executables:)
     @jobs = jobs
     @executables = executables
+    @result = StringIO.new
   end
 
   def with_warmup(&block)
@@ -18,25 +19,36 @@ class BenchmarkDriver::Output::Skybench
 
   def with_benchmark(&block)
     @with_benchmark = true
-
-    $stdout.puts 'ruby:'
-    @executables.each do |executable|
-      $stdout.puts "  - #{executable.name}"
-    end
-    $stdout.puts 'results:'
+    doubly_puts "metrics_unit: #{@metrics_type.unit}"
+    doubly_puts 'results:'
 
     block.call
+  ensure
+    if ENV.key?('RESULT_YAML')
+      @result.rewind
+      File.write(ENV['RESULT_YAML'], @result.read)
+    else
+      $stderr.puts "Missing $RESULT_YAML"
+    end
+    @result.close
   end
 
   def with_job(job, &block)
     if @with_benchmark
-      $stdout.puts "  #{job.name}:"
+      doubly_puts "  #{job.name}:"
     end
     block.call
   end
 
   # @param [BenchmarkDriver::Metrics] metrics
   def report(metrics)
-    $stdout.puts('    - %6.3f  ' % metrics.value)
+    doubly_puts("    #{metrics.executable.name}: %6.3f" % metrics.value)
+  end
+
+  private
+
+  def doubly_puts(str)
+    @result.puts(str)
+    $stdout.puts(str)
   end
 end

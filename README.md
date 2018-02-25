@@ -19,6 +19,12 @@ $ bundle exec middleman server
 
 Open localhost:4567.
 
+## Update results
+
+```
+rake mjit_releases
+```
+
 ## License
 
 MIT License

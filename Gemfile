@@ -6,6 +6,7 @@ end
 
 group :benchmark do
   gem 'benchmark_driver'
+  #gem 'benchmark_driver', path: '/home/k0kubun/src/github.com/k0kubun/benchmark_driver'
   gem 'benchmark_driver-output-skybench', path: 'benchmark_driver-output-skybench'
   gem 'rake'
 end
