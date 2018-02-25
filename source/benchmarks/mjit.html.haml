@@ -12,6 +12,8 @@
   .text-center
     %h1 MJIT Benchmarks
 
+    = link_to 'benchmark-driver/mjit-benchmarks', 'https://github.com/benchmark-driver/mjit-benchmarks'
+
   #graph_metadata{ 'data-versions': versions.to_json }
   - results.each do |name, values|
     .benchmark_graph{ id: name, 'data-values': values.to_json }
