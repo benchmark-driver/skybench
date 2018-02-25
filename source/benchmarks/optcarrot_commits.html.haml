@@ -1,0 +1,12 @@
+.benchmark_page
+  .text-center
+    %h1 Optcarrot: Ruby Commits
+
+    = link_to 'benchmark-driver/optcarrot', 'https://github.com/benchmark-driver/optcarrot'
+
+    :ruby
+      locals = {
+        yaml_path: File.expand_path('../../results/optcarrot_commits.yml', __dir__),
+        width_percent: 90,
+      }
+    = partial 'graphs', locals: locals

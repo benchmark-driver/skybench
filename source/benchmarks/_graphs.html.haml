@@ -1,0 +1,54 @@
+:ruby
+  require 'json'
+  require 'yaml'
+
+  data = YAML.load_file(yaml_path)
+
+  metrics_unit = data.fetch('metrics_unit')
+  results = data.fetch('results')
+
+#graph_metadata{ 'data-unit': metrics_unit }
+
+- results.each do |name, value_by_version|
+  :ruby
+    versions = value_by_version.keys.map { |v| v.sub(/,--jit\z/, '') }.uniq
+    vm_values = versions.map { |version| value_by_version[version] }
+    jit_values = versions.map { |version| value_by_version["#{version},--jit"] }
+
+    graph_data = {
+      'data-versions': versions.to_json,
+      'data-vm-values': vm_values.to_json,
+      'data-jit-values': jit_values.to_json,
+    }
+  .benchmark_graph{ graph_data, id: name, style: "width: #{width_percent}%;" }
+
+:javascript
+  $(function () {
+    var unit = $('#graph_metadata').data('unit');
+    $('.benchmark_graph').each(function() {
+      var id = $(this).attr('id');
+      Highcharts.chart(id, {
+        chart: {
+          type: 'column'
+        },
+        title: {
+          text: id
+        },
+        yAxis: {
+          title: {
+            text: unit
+          }
+        },
+        xAxis: {
+          categories: $(this).data('versions')
+        },
+        series: [{
+          name: id,
+          data: $(this).data('vm-values')
+        },{
+          name: id + " +JIT",
+          data: $(this).data('jit-values')
+        }]
+      });
+    });
+  });

@@ -1,61 +1,12 @@
-:ruby
-  require 'json'
-  require 'yaml'
-
-  yaml = File.expand_path('../../results/mjit_releases.yml', __dir__)
-  data = YAML.load_file(yaml)
-
-  metrics_unit = data.fetch('metrics_unit')
-  results = data.fetch('results')
-
 .benchmark_page
   .text-center
-    %h1 MJIT Benchmarks
+    %h1 MJIT Benchmarks: Ruby Releases
 
     = link_to 'benchmark-driver/mjit-benchmarks', 'https://github.com/benchmark-driver/mjit-benchmarks'
 
-  #graph_metadata{ 'data-unit': metrics_unit }
-
-  - results.each do |name, value_by_version|
     :ruby
-      versions = value_by_version.keys.map { |v| v.sub(/,--jit\z/, '') }.uniq
-      vm_values = versions.map { |version| value_by_version[version] }
-      jit_values = versions.map { |version| value_by_version["#{version},--jit"] }
-
-      graph_data = {
-        'data-versions': versions.to_json,
-        'data-vm-values': vm_values.to_json,
-        'data-jit-values': jit_values.to_json,
+      locals = {
+        yaml_path: File.expand_path('../../results/mjit_releases.yml', __dir__),
+        width_percent: 70,
       }
-    .benchmark_graph{ graph_data, id: name }
-
-:javascript
-  $(function () {
-    var unit = $('#graph_metadata').data('unit');
-    $('.benchmark_graph').each(function() {
-      var id = $(this).attr('id');
-      Highcharts.chart(id, {
-        chart: {
-          type: 'column'
-        },
-        title: {
-          text: id
-        },
-        yAxis: {
-          title: {
-            text: unit
-          }
-        },
-        xAxis: {
-          categories: $(this).data('versions')
-        },
-        series: [{
-          name: id,
-          data: $(this).data('vm-values')
-        },{
-          name: id + " +JIT",
-          data: $(this).data('jit-values')
-        }]
-      });
-    });
-  });
+    = partial 'graphs', locals: locals
