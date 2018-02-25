@@ -8,5 +8,6 @@
       locals = {
         yaml_path: File.expand_path('../../results/mjit_releases.yml', __dir__),
         width_percent: 70,
+        chart_type: 'column',
       }
     = partial 'graphs', locals: locals

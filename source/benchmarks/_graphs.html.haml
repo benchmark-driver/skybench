@@ -7,7 +7,7 @@
   metrics_unit = data.fetch('metrics_unit')
   results = data.fetch('results')
 
-#graph_metadata{ 'data-unit': metrics_unit }
+#graph_metadata{ 'data-unit': metrics_unit, 'data-type': chart_type }
 
 - results.each do |name, value_by_version|
   :ruby
@@ -24,12 +24,13 @@
 
 :javascript
   $(function () {
+    var type = $('#graph_metadata').data('type');
     var unit = $('#graph_metadata').data('unit');
     $('.benchmark_graph').each(function() {
       var id = $(this).attr('id');
       Highcharts.chart(id, {
         chart: {
-          type: 'column'
+          type: type
         },
         title: {
           text: id

@@ -7,6 +7,7 @@
     :ruby
       locals = {
         yaml_path: File.expand_path('../../results/optcarrot_commits.yml', __dir__),
-        width_percent: 90,
+        width_percent: 100,
+        chart_type: 'line',
       }
     = partial 'graphs', locals: locals
