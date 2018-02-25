@@ -2,7 +2,7 @@
   require 'json'
   require 'yaml'
 
-  yaml = File.expand_path('../../results/mjit.yml', __dir__)
+  yaml = File.expand_path('../../results/mjit_releases.yml', __dir__)
   data = YAML.load_file(yaml)
 
   versions = data.fetch('ruby')
