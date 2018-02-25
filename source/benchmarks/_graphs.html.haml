@@ -22,6 +22,18 @@
     }
   .benchmark_graph{ graph_data, id: name, style: "width: #{width_percent}%;" }
 
+  - if defined?(show_table) && show_table
+    %table.table.table-striped.table-bordered{ style: 'width: 40%; margin: 0 auto;' }
+      %thead
+        %tr
+          %th.text-center Revision
+          %th.text-center= metrics_unit
+      %tbody
+        - versions.zip(vm_values).each do |version, value|
+          %tr
+            %td= version
+            %td= value
+
 :javascript
   $(function () {
     var type = $('#graph_metadata').data('type');
