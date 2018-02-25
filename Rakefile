@@ -8,6 +8,7 @@ release_rubies = [
   '2.4.3',
   '2.5.0',
   '2.6.0-preview1',
+  '2.6.0-preview1,--jit',
 ]
 
 task 'benchmarks/mjit-benchmarks' do
@@ -23,8 +24,8 @@ task mjit_releases: 'benchmarks/mjit-benchmarks' do
   Bundler.with_clean_env do
     result_yaml = File.expand_path('results/mjit_releases.yml', __dir__)
     bench_dir = File.expand_path('benchmarks/mjit-benchmarks/benchmarks', __dir__)
-    sh "RESULT_YAML=#{result_yaml.shellescape} bin/benchmark-driver -o skybench #{bench_dir.shellescape}/aref.yml #{bench_dir.shellescape}/aread.yml --rbenv 2.4.3"
-    #sh "RESULT_YAML=#{result_yaml.shellescape} bin/benchmark-driver -o skybench #{bench_dir.shellescape}/*.yml"
+    sh "RESULT_YAML=#{result_yaml.shellescape} bin/benchmark-driver -o skybench #{bench_dir.shellescape}/*.yml "\
+      "--rbenv '#{release_rubies.join(';')}'"
   end
 end
 
