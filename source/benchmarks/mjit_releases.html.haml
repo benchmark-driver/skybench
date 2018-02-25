@@ -5,7 +5,6 @@
   yaml = File.expand_path('../../results/mjit_releases.yml', __dir__)
   data = YAML.load_file(yaml)
 
-  versions = data.fetch('ruby')
   results  = data.fetch('results')
 
 .benchmark_page
@@ -14,14 +13,11 @@
 
     = link_to 'benchmark-driver/mjit-benchmarks', 'https://github.com/benchmark-driver/mjit-benchmarks'
 
-  #graph_metadata{ 'data-versions': versions.to_json }
-  - results.each do |name, values|
-    .benchmark_graph{ id: name, 'data-values': values.to_json }
+  - results.each do |name, value_by_version|
+    .benchmark_graph{ id: name, 'data-versions': value_by_version.keys.to_json, 'data-values': value_by_version.values.to_json }
 
 :javascript
   $(function () {
-    var versions = $('#graph_metadata').data('versions');
-
     $('.benchmark_graph').each(function() {
       var id = $(this).attr('id');
       Highcharts.chart(id, {
@@ -37,7 +33,7 @@
           }
         },
         xAxis: {
-          categories: versions
+          categories: $(this).data('versions')
         },
         series: [{
           name: id,
