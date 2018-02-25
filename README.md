@@ -7,7 +7,9 @@ and thus can't host [ruby-bench-web](https://github.com/ruby-bench/ruby-bench-we
 
 ## Setup
 
-???
+```
+$ git submodule init && git submodule update
+```
 
 ## Development
 
