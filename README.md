@@ -22,7 +22,15 @@ Open localhost:4567.
 ## Update results
 
 ```
-rake mjit_releases
+$ rake mjit_releases
+# or
+$ RESULT_YAML=results/xxx.yml bin/benchmark-driver -o skybench --rbenv 'xxx;yyy' xxx.yml
+```
+
+## Build
+
+```
+$ bundle exec middleman build
 ```
 
 ## License
