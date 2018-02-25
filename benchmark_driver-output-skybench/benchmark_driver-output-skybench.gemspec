@@ -1,17 +1,16 @@
-
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "benchmark/output/skybench/version"
+require "benchmark_driver/output/skybench"
 
 Gem::Specification.new do |spec|
-  spec.name          = "benchmark-output-skybench"
-  spec.version       = Benchmark::Output::Skybench::VERSION
+  spec.name          = "benchmark_driver-output-skybench"
+  spec.version       = BenchmarkDriver::Output::Skybench::VERSION
   spec.authors       = ["Takashi Kokubun"]
   spec.email         = ["takashikkbn@gmail.com"]
 
   spec.summary       = %q{Skybench}
   spec.description   = %q{Skybench}
-  spec.homepage      = "https://github.com/k0kubun/benchmark_driver"
+  spec.homepage      = "https://github.com/benchmark-driver/skybench"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|

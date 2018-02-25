@@ -38,9 +38,9 @@ GIT
       uglifier (~> 3.0)
 
 PATH
-  remote: benchmark-output-skybench
+  remote: benchmark_driver-output-skybench
   specs:
-    benchmark-output-skybench (0.1.0)
+    benchmark_driver-output-skybench (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -114,8 +114,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  benchmark-output-skybench!
   benchmark_driver
+  benchmark_driver-output-skybench!
   middleman!
   pry
   rake

@@ -6,7 +6,7 @@ end
 
 group :benchmark do
   gem 'benchmark_driver'
-  gem 'benchmark-output-skybench', path: 'benchmark-output-skybench'
+  gem 'benchmark_driver-output-skybench', path: 'benchmark_driver-output-skybench'
   gem 'rake'
 end
 
