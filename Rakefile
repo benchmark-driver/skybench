@@ -19,13 +19,25 @@ task 'benchmarks/optcarrot' do
   sh 'git submodule init && git submodule update'
 end
 
-desc 'Run MJIT benchmark'
+desc 'Run MJIT releases benchmark'
 task mjit_releases: 'benchmarks/mjit-benchmarks' do
   Bundler.with_clean_env do
     result_yaml = File.expand_path('results/mjit_releases.yml', __dir__)
     bench_dir = File.expand_path('benchmarks/mjit-benchmarks/benchmarks', __dir__)
     sh "RESULT_YAML=#{result_yaml.shellescape} bin/benchmark-driver -o skybench #{bench_dir.shellescape}/*.yml "\
       "--rbenv '#{release_rubies.join(';')}'"
+  end
+end
+
+desc 'Run Optcarrot revisions benchmark'
+task optcarrot_revision: 'benchmarks/optcarrot' do
+  Bundler.with_clean_env do
+    result_yaml = File.expand_path('results/optcarrot_revisions.yml', __dir__)
+    bench_dir = File.expand_path('benchmarks/optcarrot', __dir__)
+    Dir.chdir(bench_dir) do
+      sh "RESULT_YAML=#{result_yaml.shellescape} benchmark-driver -o skybench #{bench_dir.shellescape}/*.yml "\
+        "--rbenv '#{release_rubies.join(';')}'"
+    end
   end
 end
 
