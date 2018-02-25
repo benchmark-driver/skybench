@@ -23,16 +23,17 @@
   .benchmark_graph{ graph_data, id: name, style: "width: #{width_percent}%;" }
 
   - if defined?(show_table) && show_table
-    %table.table.table-striped.table-bordered{ style: 'width: 40%; margin: 0 auto;' }
-      %thead
-        %tr
-          %th.text-center Revision
-          %th.text-center= metrics_unit
-      %tbody
-        - versions.zip(vm_values).each do |version, value|
+    - versions.zip(vm_values).each_slice(16).each do |group|
+      %table.table.table-striped.table-bordered{ style: 'width: 40%; margin: 8px auto;' }
+        %tbody
           %tr
-            %td= version
-            %td= value
+            %th Revision
+            - group.map(&:first).each do |version|
+              %td= version
+          %tr
+            %th= metrics_unit
+            - group.map(&:last).each do |value|
+              %td= value
 
 :javascript
   $(function () {
