@@ -1,12 +1,31 @@
 %table.benchmarks-table.table.table-striped
   %thead
     %tr
+      %th Name
       %th Results
       %th Description
   %tbody
-    %tr
-      %td= link_to 'MJIT: Ruby Releases', '/benchmarks/mjit_releases.html'
-      %td Benchmark set created by Vladimir Makarov
-    %tr
-      %td= link_to 'Optcarrot: Ruby Commits', '/benchmarks/optcarrot_commits.html'
-      %td Benchmark created by Yusuke Endoh
+    :ruby
+      results = [
+        { name: 'Ruby Core',   prefix: 'ruby_core',   description: 'Official Benchmark set in Ruby repository',       disabled: %i[releases commits] },
+        { name: 'Ruby Method', prefix: 'ruby_method', description: 'Ruby method benchmark set created by Watson1978', disabled: %i[releases commits] },
+        { name: 'MJIT',        prefix: 'mjit',        description: 'Benchmark set created by Vladimir Makarov',       disabled: %i[commits] },
+        { name: 'Optcarrot',   prefix: 'optcarrot',   description: 'Benchmark created by Yusuke Endoh',               disabled: %i[releases] },
+      ]
+    - results.each do |definition|
+      %tr
+        %td= definition.fetch(:name)
+        %td.margined-links
+          - disabled = definition.fetch(:disabled, [])
+
+          - if disabled.include?(:releases)
+            %span Ruby Releases
+          - else
+            = link_to 'Ruby Releases', "/benchmarks/#{definition.fetch(:prefix)}_releases.html"
+
+          - if disabled.include?(:commits)
+            %span Ruby Commits
+          - else
+            = link_to 'Ruby Commits', "/benchmarks/#{definition.fetch(:prefix)}_commits.html"
+
+        %td= definition.fetch(:description)

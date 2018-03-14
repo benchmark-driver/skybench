@@ -39,9 +39,16 @@ a {
 }
 
 .benchmarks-table {
-  width: 700px;
+  width: 70%;
   margin: 0 auto 14px auto;
   a {
     text-decoration: underline;
+  }
+}
+
+.margined-links {
+  a,
+  span {
+    margin-right: 10px;
   }
 }
