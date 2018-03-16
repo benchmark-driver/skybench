@@ -1,6 +1,7 @@
 box: ruby
 build:
   steps:
+    # Prepare benchmark-driver.github.io and its push access in "/build"
     - add-ssh-key:
         keyname: BENCHMARK_DRIVER_GITHUB_IO
         host: github.com
@@ -8,9 +9,18 @@ build:
         hostname: github.com
     - script:
         name: Clone benchmark-driver.github.io
-        code: git clone git@github.com:benchmark-driver/benchmark-driver.github.io
+        code: git clone git@github.com:benchmark-driver/benchmark-driver.github.io build
 
+    # Build benchmark-driver.github.io
     - bundle-install
     - script:
+      name: install execjs runtime
+      code: apt-get update && apt-get install -y nodejs
+    - script:
+      name: middleman build
+      code: bundle exec middleman build
+
+    # Build benchmark-driver.github.io
+    - script:
       name: test
-      code: bundle exec ruby -e "puts 'hello world'"
+      code: git -C build status && git -C build diff
