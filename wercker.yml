@@ -26,12 +26,14 @@ build:
       code: |
         revision="$(git rev-parse HEAD)"
         cd build
-        git config --global user.email "skybench@example.com"
-        git config --global user.name "skybench"
         git add .
-        git commit -m "Automatic deployment by Wercker
+        if ! git diff-index --quiet HEAD --; then
+          git config --global user.email "skybench@example.com"
+          git config --global user.name "skybench"
+          git commit -m "Automatic deployment by Wercker
 
-        See: https://github.com/benchmark-driver/skybench/commit/${revision}"
+          See: https://github.com/benchmark-driver/skybench/commit/${revision}"
+        fi
 
     # Deploy benchmark-driver.github.io
     - script:
