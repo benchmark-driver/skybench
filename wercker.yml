@@ -22,5 +22,18 @@ build:
 
     # Build benchmark-driver.github.io
     - script:
-      name: test
-      code: git -C build status && git -C build diff
+      name: git commit
+      code: |
+        revision="$(git rev-parse HEAD)"
+        cd build
+        git config --global user.email "skybench@example.com"
+        git config --global user.name "skybench"
+        git add .
+        git commit -m "Automatic deployment by Wercker
+
+        See: https://github.com/benchmark-driver/skybench/commit/${revision}"
+
+    # Deploy benchmark-driver.github.io
+    - script:
+      name: git push
+      code: git -C build push origin master
