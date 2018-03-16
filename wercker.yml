@@ -1,7 +1,39 @@
 box: ruby
 build:
   steps:
+    # Prepare benchmark-driver.github.io and its push access in "/build"
+    - add-ssh-key:
+        keyname: BENCHMARK_DRIVER_GITHUB_IO
+        host: github.com
+    - add-to-known_hosts:
+        hostname: github.com
+    - script:
+        name: Clone benchmark-driver.github.io
+        code: git clone git@github.com:benchmark-driver/benchmark-driver.github.io build
+
+    # Build benchmark-driver.github.io
     - bundle-install
     - script:
-      name: test
-      code: bundle exec ruby -e "puts 'hello world'"
+      name: install execjs runtime
+      code: apt-get update && apt-get install -y nodejs
+    - script:
+      name: middleman build
+      code: bundle exec middleman build
+
+    # Build benchmark-driver.github.io
+    - script:
+      name: git commit
+      code: |
+        revision="$(git rev-parse HEAD)"
+        cd build
+        git config --global user.email "skybench@example.com"
+        git config --global user.name "skybench"
+        git add .
+        git commit -m "Automatic deployment by Wercker
+
+        See: https://github.com/benchmark-driver/skybench/commit/${revision}"
+
+    # Deploy benchmark-driver.github.io
+    - script:
+      name: git push
+      code: git -C build push origin master
