@@ -1,6 +1,15 @@
 box: ruby
 build:
   steps:
+    - add-ssh-key:
+        keyname: BENCHMARK_DRIVER_GITHUB_IO
+        host: github.com
+    - add-to-known_hosts:
+        hostname: github.com
+    - script:
+        name: Clone benchmark-driver.github.io
+        code: git clone git@github.com:benchmark-driver/benchmark-driver.github.io
+
     - bundle-install
     - script:
       name: test
