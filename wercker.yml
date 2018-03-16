@@ -32,7 +32,7 @@ build:
           git config --global user.name "skybench"
           git commit -m "Automatic deployment by Wercker
 
-          See: https://github.com/benchmark-driver/skybench/commit/${revision}"
+        See: https://github.com/benchmark-driver/skybench/commit/${revision}"
         fi
 
     # Deploy benchmark-driver.github.io
