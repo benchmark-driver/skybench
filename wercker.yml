@@ -36,4 +36,8 @@ build:
     # Deploy benchmark-driver.github.io
     - script:
       name: git push
-      code: git -C build push origin master
+      code: |
+        cd build
+        if [ "_$(git rev-parse origin/master)" != "_$(git rev-parse HEAD)" ]; then
+          git push origin master
+        fi
