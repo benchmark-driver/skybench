@@ -12,13 +12,23 @@ release_rubies = [
   '2.6.0-preview1',
 ]
 
-names.each do |name|
-  desc "Update #{name} releases"
-  task :"#{name}_releases" do
-    sh "echo hello"
-    # Bundler.with_clean_env
-    # RESULT_YAML=results/xxx.yml bin/benchmark-driver -o skybench --rbenv 'xxx;yyy' xxx.yml
+desc 'Update releases'
+task :releases do
+  definition_dir = File.expand_path('benchmark/definitions', __dir__)
+  definition_patterns = [
+    'mjit-benchmarks/benchmarks/*.yml',
+    'optcarrot/benchmark.yml',
+  ]
+
+  definition_patterns.each do |pattern|
+    pattern = File.join(definition_dir, pattern)
+    Dir.glob(pattern).sort.each do |yaml|
+      p yaml
+    end
   end
+
+  # Bundler.with_clean_env
+  # RESULT_YAML=results/xxx.yml bin/benchmark-driver -o skybench --rbenv 'xxx;yyy' xxx.yml
 end
 
-task update_releases: names.map { |name| :"#{name}_releases" }
+task default: :releases
