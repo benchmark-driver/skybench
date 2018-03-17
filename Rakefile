@@ -1,8 +1,9 @@
-names = %i[
-  ruby_core
-]
+require 'bundler'
+require 'fileutils'
+require 'shellwords'
+require 'yaml'
 
-release_rubies = [
+release_versions = [
   '2.0.0-p648',
   '2.1.10',
   '2.2.9',
@@ -15,20 +16,39 @@ release_rubies = [
 desc 'Update releases'
 task :releases do
   definition_dir = File.expand_path('benchmark/definitions', __dir__)
-  definition_patterns = [
-    'mjit-benchmarks/benchmarks/*.yml',
-    'optcarrot/benchmark.yml',
-  ]
+  repeat_count_by_pattern = {
+    'mjit-benchmarks/benchmarks/*.yml' => 1,
+    'optcarrot/benchmark.yml' => 4,
+  }
 
-  definition_patterns.each do |pattern|
-    pattern = File.join(definition_dir, pattern)
-    Dir.glob(pattern).sort.each do |yaml|
-      p yaml
+  repeat_count_by_pattern.each do |pattern, repeat_count|
+    Dir.glob(File.join(definition_dir, pattern)).sort.each do |definition_yaml|
+      result_yaml = File.join('benchmark/results', definition_yaml.delete_prefix(definition_dir))
+
+      # Decide which versions to run
+      if File.exist?(result_yaml)
+        versions = []
+        YAML.load_file(result_yaml).fetch('results').each do |name, results|
+          versions |= release_versions - results.keys # add missing versions
+        end
+      else
+        versions = release_versions
+        FileUtils.mkdir_p(File.dirname(result_yaml))
+      end
+
+      # Run benchmark if necessary
+      unless versions.empty?
+        Bundler.with_clean_env do
+          ENV['RESULT_YAML'] = result_yaml
+          sh [
+            'bin/benchmark-driver', '-o', 'skybench', definition_yaml,
+            '--rbenv', versions.join(';'),
+            '--repeat-count', repeat_count.to_s,
+          ].shelljoin
+        end
+      end
     end
   end
-
-  # Bundler.with_clean_env
-  # RESULT_YAML=results/xxx.yml bin/benchmark-driver -o skybench --rbenv 'xxx;yyy' xxx.yml
 end
 
 task default: :releases

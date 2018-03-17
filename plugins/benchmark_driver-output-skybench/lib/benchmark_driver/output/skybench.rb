@@ -21,6 +21,10 @@ class BenchmarkDriver::Output::Skybench
   def with_benchmark(&block)
     @with_benchmark = true
     doubly_puts "metrics_unit: #{@metrics_type.unit}"
+    doubly_puts 'descriptions:'
+    @executables.each do |executable|
+      doubly_puts "  #{executable.name}: #{executable.description.dump}"
+    end
     doubly_puts 'results:'
 
     block.call
@@ -62,6 +66,7 @@ class BenchmarkDriver::Output::Skybench
     hash = YAML.load(yaml)
 
     base_hash['metrics_unit'] = hash['metrics_unit']
+    base_hash['descriptions'] = base_hash.fetch('descriptions', {}).merge(hash['descriptions'])
 
     hash['results'].each do |job, value_by_exec|
       unless base_hash['results'].key?(job)

@@ -24,4 +24,7 @@ bundle exec rake releases
 # TODO
 
 # 7. Commit results
-# TODO
+git add benchmark/results
+git commit -m "Benchmark result update by skybench"
+git pull --rebase origin master
+git push origin master
