@@ -1,3 +1,10 @@
-#!/bin/bash -ex
-
+#!/bin/bash -e
 eval "$(rbenv init -)"
+set -x
+
+repo_root="$(cd "$(dirname $0)"; cd ..; pwd)"
+cd "$repo_root"
+git submodule init && git submodule update
+
+bundle check || bundle install -j24
+bundle exec rake

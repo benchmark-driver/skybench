@@ -1,4 +1,6 @@
-require 'shellwords'
+names = %i[
+  ruby_core
+]
 
 release_rubies = [
   '2.0.0-p648',
@@ -8,37 +10,15 @@ release_rubies = [
   '2.4.3',
   '2.5.0',
   '2.6.0-preview1',
-  '2.6.0-preview1,--jit',
 ]
 
-task 'benchmarks/mjit-benchmarks' do
-  sh 'git submodule init && git submodule update'
-end
-
-task 'benchmarks/optcarrot' do
-  sh 'git submodule init && git submodule update'
-end
-
-desc 'Run MJIT releases benchmark'
-task mjit_releases: 'benchmarks/mjit-benchmarks' do
-  Bundler.with_clean_env do
-    result_yaml = File.expand_path('results/mjit_releases.yml', __dir__)
-    bench_dir = File.expand_path('benchmarks/mjit-benchmarks/benchmarks', __dir__)
-    sh "RESULT_YAML=#{result_yaml.shellescape} bin/benchmark-driver -o skybench #{bench_dir.shellescape}/*.yml "\
-      "--rbenv '#{release_rubies.join(';')}'"
+names.each do |name|
+  desc "Update #{name} releases"
+  task :"#{name}_releases" do
+    sh "echo hello"
+    # Bundler.with_clean_env
+    # RESULT_YAML=results/xxx.yml bin/benchmark-driver -o skybench --rbenv 'xxx;yyy' xxx.yml
   end
 end
 
-desc 'Run Optcarrot revisions benchmark'
-task optcarrot_revision: 'benchmarks/optcarrot' do
-  Bundler.with_clean_env do
-    result_yaml = File.expand_path('results/optcarrot_revisions.yml', __dir__)
-    bench_dir = File.expand_path('benchmarks/optcarrot', __dir__)
-    Dir.chdir(bench_dir) do
-      sh "RESULT_YAML=#{result_yaml.shellescape} benchmark-driver -o skybench #{bench_dir.shellescape}/*.yml "\
-        "--rbenv '#{release_rubies.join(';')}'"
-    end
-  end
-end
-
-task default: :mjit_releases
+task default: names.map { |name| :"#{name}_releases" }
