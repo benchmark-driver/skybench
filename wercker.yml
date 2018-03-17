@@ -18,7 +18,7 @@ build:
       code: apt-get update && apt-get install -y nodejs
     - script:
       name: middleman build
-      code: bundle exec middleman build
+      code: TZ=Asia/Tokyo bundle exec middleman build
 
     # Build benchmark-driver.github.io
     - script:
