@@ -4,6 +4,8 @@
   .description_box
     %p.large_explanation
       Experimental benchmark result viewer for benchmark-driver
-    %p Last Update: #{Time.now.strftime('%Y-%m-%d (%a) %H:%M:%S %Z')}
+
+    -# WERCKER_COMMIT_TIMESTAMP is updated by wercker.yml
+    %p Last Update: WERCKER_COMMIT_TIMESTAMP
 
 = partial 'benchmarks/table'

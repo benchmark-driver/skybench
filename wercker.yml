@@ -30,6 +30,11 @@ build:
           cd build
           git add .
           if ! git diff-index --quiet HEAD --; then
+            ruby -e "
+              html = File.read('index.html')
+              html.sub!(/WERCKER_COMMIT_TIMESTAMP/, Time.now.strftime('%Y-%m-%d (%a) %H:%M:%S %Z'))
+              File.write('index.html', html)
+            "
             git config --global user.email "skybench@example.com"
             git config --global user.name "skybench"
             git commit -m "Automatic deployment by Wercker
