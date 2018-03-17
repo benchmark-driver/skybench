@@ -38,7 +38,7 @@ You can assume rbenv(1) is available in $PATH. See https://github.com/benchmark-
 
 ## Update results
 
-```
+```bash
 $ rake mjit_releases
 # or
 $ RESULT_YAML=results/xxx.yml bin/benchmark-driver -o skybench --rbenv 'xxx;yyy' xxx.yml
