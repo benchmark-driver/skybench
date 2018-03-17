@@ -25,6 +25,8 @@ bundle exec rake releases
 
 # 7. Commit results
 git add benchmark/results
-git commit -m "Benchmark result update by skybench"
-git pull --rebase origin master
-git push origin master
+if ! git diff-index --quiet HEAD --; then
+  git commit -m "Benchmark result update by skybench"
+  git pull --rebase origin master
+  git push origin master
+fi
