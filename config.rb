@@ -33,6 +33,10 @@ helpers do
   def github_link(repository)
     link_to repository, "https://github.com/#{repository}"
   end
+
+  def result_path(path)
+    File.join(File.expand_path('benchmark/results', __dir__), path)
+  end
 end
 
 # Build-specific configuration
