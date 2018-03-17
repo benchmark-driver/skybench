@@ -32,7 +32,9 @@ build:
           if ! git diff-index --quiet HEAD --; then
             git config --global user.email "skybench@example.com"
             git config --global user.name "skybench"
-            git commit -m "Automatic deployment by Wercker\n\nSee: https://github.com/benchmark-driver/skybench/commit/${revision}"
+            git commit -m "Automatic deployment by Wercker
+
+        See: https://github.com/benchmark-driver/skybench/commit/${revision}"
           fi
         fi
 
