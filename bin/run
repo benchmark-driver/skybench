@@ -1,19 +1,27 @@
 #!/bin/bash -e
-#
-# What this system should do:
-#
-# 1. git pull skybench (already done before this script)
-# 2. Update all release benchmark yamls
-# 3. Build ruby revisions
-# 4. Update all revision benchmark yamls
-# 5. commit results
-#
+# 0. systemd-timer updates this repository to latest master
+
+# 1. Setup rbenv
 eval "$(rbenv init -)"
 set -x
 
+# 2. Update benchmark definitions
 repo_root="$(cd "$(dirname $0)"; cd ..; pwd)"
 cd "$repo_root"
 git submodule init && git submodule update
 
+# 3. Install ruby releases
+# TODO
+
+# 4. Update all release benchmark yamls
 bundle check || bundle install -j24
 bundle exec rake update_releases
+
+# 5. Build ruby revisions
+# TODO
+
+# 6. Update all revision benchmark yamls
+# TODO
+
+# 7. Commit results
+# TODO
