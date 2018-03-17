@@ -24,6 +24,7 @@ build:
     - script:
       name: git commit
       code: |
+        set -x
         if [ "_$WERCKER_GIT_BRANCH" = "_master" ]; then
           revision="$(git rev-parse HEAD)"
           cd build
@@ -39,6 +40,7 @@ build:
     - script:
       name: git push
       code: |
+        set -x
         if [ "_$WERCKER_GIT_BRANCH" = "_master" ]; then
           cd build
           if [ "_$(git rev-parse origin/master)" != "_$(git rev-parse HEAD)" ]; then
