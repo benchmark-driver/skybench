@@ -19,18 +19,29 @@ $ bundle exec middleman server
 
 Open localhost:4567.
 
+## Build
+
+```
+$ bundle exec middleman build
+```
+
+## How is this used?
+
+On ruby-sky2 server, systemd-timer runs `git clone`/`git pull` for this repository and
+the following script periodically.
+
+```
+bin/run
+```
+
+You can assume rbenv(1) is available in $PATH. See https://github.com/benchmark-driver/sky2-infra for details.
+
 ## Update results
 
 ```
 $ rake mjit_releases
 # or
 $ RESULT_YAML=results/xxx.yml bin/benchmark-driver -o skybench --rbenv 'xxx;yyy' xxx.yml
-```
-
-## Build
-
-```
-$ bundle exec middleman build
 ```
 
 ## License
