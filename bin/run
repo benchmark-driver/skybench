@@ -3,9 +3,9 @@
 # What this system should do:
 #
 # 1. git pull skybench (already done before this script)
-# 2. update all release benchmark yamls
-# 3. build ruby revisions
-# 4. update all revision benchmarks yamls
+# 2. Update all release benchmark yamls
+# 3. Build ruby revisions
+# 4. Update all revision benchmark yamls
 # 5. git commit && git pull --rebase && git push skybench
 #
 eval "$(rbenv init -)"
