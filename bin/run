@@ -6,7 +6,7 @@
 # 2. Update all release benchmark yamls
 # 3. Build ruby revisions
 # 4. Update all revision benchmark yamls
-# 5. git commit && git pull --rebase && git push skybench
+# 5. commit results
 #
 eval "$(rbenv init -)"
 set -x
@@ -16,4 +16,4 @@ cd "$repo_root"
 git submodule init && git submodule update
 
 bundle check || bundle install -j24
-bundle exec rake
+bundle exec rake update_releases

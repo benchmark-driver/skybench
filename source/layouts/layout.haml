@@ -18,6 +18,8 @@
           %ul.nav.navbar-nav.navbar-right
             %li
               = link_to 'Benchmarks', '/benchmarks.html'
+            %li
+              = link_to 'Hardware', '/hardware.html'
     .container
       = yield
 
@@ -28,4 +30,4 @@
           See the source code at #{link_to 'https://github.com/benchmark-driver/benchmark-driver.github.io'}.
           %br
           This is built to test edge features of benchmark_driver.gem.
-          You may want to see https://rubybench.org as well.
+          You may want to see #{link_to 'https://rubybench.org'} as well.

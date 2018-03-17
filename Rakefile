@@ -21,4 +21,4 @@ names.each do |name|
   end
 end
 
-task default: names.map { |name| :"#{name}_releases" }
+task update_releases: names.map { |name| :"#{name}_releases" }
