@@ -2,7 +2,7 @@
   .text-center
     %h1 Optcarrot: Ruby Commits
 
-    = link_to 'benchmark-driver/optcarrot', 'https://github.com/benchmark-driver/optcarrot'
+    = github_link 'benchmark-driver/optcarrot'
 
     :ruby
       locals = {
@@ -11,4 +11,4 @@
         chart_type: 'line',
         show_table: true,
       }
-    = partial '../graphs', locals: locals
+    = partial '../legacy_graphs', locals: locals

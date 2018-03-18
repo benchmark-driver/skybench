@@ -4,4 +4,13 @@
 
     = github_link 'benchmark-driver/optcarrot'
 
-    %h3 WIP...
+    :ruby
+      results = releases_results('optcarrot/benchmark.yml')
+      locals = {
+        vm_value_by_version_by_job: results.fetch('results'),
+        description_by_version: results.fetch('descriptions'),
+        metrics_unit: results.fetch('metrics_unit'),
+        width_percent: 70,
+        chart_type: 'column',
+      }
+    = partial '../graphs', locals: locals
