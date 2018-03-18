@@ -35,8 +35,8 @@ task :releases do
           # Select missing versions
           missing_versions = release_versions - (results || {}).keys
           required_ruby_version = definition['required_ruby_version']
-          if definition['benchmark'].is_a?(Hash) && definition['benchmark'][name].is_a?(Hash) && definition['benchmark'][name].key?('required_ruby_version')
-            required_ruby_version = definition['benchmark'][name]['required_ruby_version']
+          if definition['benchmark'].is_a?(Array) && (job = definition['benchmark'].find { |j| j['name'] == name }) && job.key?('required_ruby_version')
+            required_ruby_version = job['required_ruby_version']
           end
           if required_ruby_version
             missing_versions.select! { |v| Gem::Version.new(v) >= Gem::Version.new(required_ruby_version) }
