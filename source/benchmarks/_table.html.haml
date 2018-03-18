@@ -21,11 +21,11 @@
           - if disabled.include?(:releases)
             %span Ruby Releases
           - else
-            = link_to 'Ruby Releases', "/benchmarks/#{definition.fetch(:prefix)}_releases.html"
+            = link_to 'Ruby Releases', "/benchmarks/#{definition.fetch(:prefix)}/releases.html"
 
           - if disabled.include?(:commits)
             %span Ruby Commits
           - else
-            = link_to 'Ruby Commits', "/benchmarks/#{definition.fetch(:prefix)}_commits.html"
+            = link_to 'Ruby Commits', "/benchmarks/#{definition.fetch(:prefix)}/commits.html"
 
         %td= definition.fetch(:description)
