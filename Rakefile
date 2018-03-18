@@ -31,7 +31,7 @@ task :releases do
       if File.exist?(result_yaml)
         versions = []
         YAML.load_file(result_yaml).fetch('results').each do |name, results|
-          versions |= release_versions - results.keys # add missing versions
+          versions |= release_versions - (results || {}).keys # add missing versions
         end
       else
         versions = release_versions
