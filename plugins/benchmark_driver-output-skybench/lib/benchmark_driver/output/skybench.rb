@@ -71,7 +71,7 @@ class BenchmarkDriver::Output::Skybench
     base_hash['descriptions'] = base_hash.fetch('descriptions', {}).merge(hash['descriptions'])
 
     hash['results'].each do |job, value_by_exec|
-      unless base_hash['results'].key?(job)
+      unless base_hash['results'][job]
         base_hash['results'][job] = value_by_exec
         next
       end
