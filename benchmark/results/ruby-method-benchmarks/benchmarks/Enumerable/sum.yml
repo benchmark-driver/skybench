@@ -5,26 +5,32 @@ results:
     2.5.0: 946003.77
     2.6.0-preview1: 803636.128
     r61465: 950255.004
+    r61469: 1014339.394
   Enumerable#sum(init):
     2.5.0: 971991.804
     2.6.0-preview1: 812997.445
     r61465: 1020309.412
+    r61469: 1020034.839
   Enumerable#sum with float:
     2.5.0: 892004.458
     2.6.0-preview1: 734119.454
     r61465: 916954.98
+    r61469: 917515.157
   Enumerable#sum { |obj| ...}:
     2.5.0: 232839.212
     2.6.0-preview1: 203284.471
     r61465: 239782.742
+    r61469: 240580.172
   Enumerable#sum(init) { |obj| ...}:
     2.5.0: 226149.508
     2.6.0-preview1: 197946.092
     r61465: 240899.093
+    r61469: 239488.429
   Enumerable#sum { |obj| ...} with float:
     2.5.0: 182151.496
     2.6.0-preview1: 171156.646
     r61465: 181088.24
+    r61469: 189359.453
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -34,3 +40,4 @@ descriptions:
   2.5.0: ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
   2.6.0-preview1: ruby 2.6.0preview1 (2018-02-24 trunk 62554) [x86_64-linux]
   r61465: ruby 2.5.0dev (2017-12-25 trunk 61465) [x86_64-linux]
+  r61469: ruby 2.5.0dev (2017-12-25 trunk 61469) [x86_64-linux]

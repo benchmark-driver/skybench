@@ -10,6 +10,7 @@ results:
     2.5.0: 9149597.669
     2.6.0-preview1: 9183981.085
     r61465: 9316020.934
+    r61469: 9173100.702
   Enumerable#drop_while { |obj| true }:
     2.0.0-p648: 278953.169
     2.1.10: 264041.192
@@ -19,6 +20,7 @@ results:
     2.5.0: 276434.299
     2.6.0-preview1: 257629.198
     r61465: 274635.87
+    r61469: 283071.601
   Enumerable#drop_while { |obj| false }:
     2.0.0-p648: 392036.1
     2.1.10: 409407.505
@@ -28,6 +30,7 @@ results:
     2.5.0: 536197.068
     2.6.0-preview1: 474179.309
     r61465: 536913.836
+    r61469: 533724.256
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -37,3 +40,4 @@ descriptions:
   2.5.0: ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
   2.6.0-preview1: ruby 2.6.0preview1 (2018-02-24 trunk 62554) [x86_64-linux]
   r61465: ruby 2.5.0dev (2017-12-25 trunk 61465) [x86_64-linux]
+  r61469: ruby 2.5.0dev (2017-12-25 trunk 61469) [x86_64-linux]
