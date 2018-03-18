@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash -eu
 # 0. systemd-timer updates this repository to latest master
 
 # 1. Setup rbenv
@@ -18,9 +18,13 @@ bundle check || bundle install -j24
 bundle exec rake releases
 
 # 5. Build ruby revisions
-# TODO
+current_revision="$(rbenv versions --bare | egrep 'r[0-9]+' | tail -n1 | tr -d '\n')"
+git -C ../ruby fetch origin trunk
+git -C ../ruby reset --hard remotes/origin/trunk
+latest_revision="r$(git -C ../ruby show | grep 'git-svn-id: svn+ssh://ci.ruby-lang.org/ruby/trunk' | sed -e 's/.*@\([0-9]*\) .*/\1/')"
+ruby-builder revision "${current_revision}..${latest_revision}" -d ../ruby
 
-# 6. Update all revision benchmark yamls
+# 6. Update benchmark yamls for the oldest revision
 # TODO
 
 # 7. Commit results
