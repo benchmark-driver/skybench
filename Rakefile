@@ -42,11 +42,16 @@ task :releases do
       unless versions.empty?
         Bundler.with_clean_env do
           ENV['RESULT_YAML'] = result_yaml
-          sh [
+          command = [
             'bin/benchmark-driver', '-o', 'skybench', definition_yaml,
             '--rbenv', versions.join(';'),
             '--repeat-count', repeat_count.to_s,
           ].shelljoin
+
+          puts "+ #{command}"
+          unless system(command) # Keep running even on failure of each benchmark execution
+            puts "Failed to execute: #{command}"
+          end
         end
       end
     end
