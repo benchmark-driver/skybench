@@ -27,8 +27,8 @@ class BenchmarkDriver::Output::Skybench
     end
     doubly_puts 'results:'
 
-    block.call
-  ensure
+    result = block.call
+
     if ENV.key?('RESULT_YAML')
       @result.rewind
       merge_yaml(ENV['RESULT_YAML'], @result.read)
@@ -36,6 +36,8 @@ class BenchmarkDriver::Output::Skybench
       $stderr.puts "Missing $RESULT_YAML"
     end
     @result.close
+
+    result
   end
 
   def with_job(job, &block)
