@@ -42,7 +42,7 @@ class BenchmarkDriver::Output::Skybench
 
   def with_job(job, &block)
     if @with_benchmark
-      doubly_puts "  #{job.name}:"
+      doubly_puts "  #{job.name.dump}:"
     end
     block.call
   end
