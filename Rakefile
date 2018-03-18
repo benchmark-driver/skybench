@@ -25,13 +25,24 @@ task :releases do
 
   repeat_count_by_pattern.each do |pattern, repeat_count|
     Dir.glob(File.join(definition_dir, pattern)).sort.each do |definition_yaml|
+      definition = YAML.load_file(definition_yaml)
       result_yaml = File.join('benchmark/results', definition_yaml.delete_prefix(definition_dir))
 
       # Decide which versions to run
       if File.exist?(result_yaml)
         versions = []
         YAML.load_file(result_yaml).fetch('results').each do |name, results|
-          versions |= release_versions - (results || {}).keys # add missing versions
+          # Select missing versions
+          missing_versions = release_versions - (results || {}).keys
+          required_ruby_version = definition['required_ruby_version']
+          if definition['benchmark'].is_a?(Hash) && definition['benchmark'][name].is_a?(Hash) && definition['benchmark'][name].key?('required_ruby_version')
+            required_ruby_version = definition['benchmark'][name]['required_ruby_version']
+          end
+          if required_ruby_version
+            missing_versions.select! { |v| Gem::Version.new(v) >= Gem::Version.new(required_ruby_version) }
+          end
+
+          versions |= missing_versions
         end
       else
         versions = release_versions
