@@ -47,7 +47,9 @@ class BenchmarkDriver::Output::Skybench
 
   # @param [BenchmarkDriver::Metrics] metrics
   def report(metrics)
-    doubly_puts("    #{metrics.executable.name}: %6.3f" % metrics.value)
+    if @with_benchmark
+      doubly_puts("    #{metrics.executable.name}: %6.3f" % metrics.value)
+    end
   end
 
   private
