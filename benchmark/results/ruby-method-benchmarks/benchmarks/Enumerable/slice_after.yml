@@ -1,9 +1,21 @@
 ---
 metrics_unit: i/s
 results:
-  dir_empty_p:
-    2.5.0: 3.904
-    2.6.0-preview1: 3.86
+  Enumerable#slice_after(pattern):
+    2.5.0: 1512728.699
+    2.6.0-preview1: 1470522.645
+  Enumerable#slice_after(range):
+    2.5.0: 1508314.929
+    2.6.0-preview1: 1446409.937
+  Enumerable#slice_after(method):
+    2.5.0: 1460665.962
+    2.6.0-preview1: 1396833.335
+  Enumerable#slice_after { |obj| true }:
+    2.5.0: 1157666.541
+    2.6.0-preview1: 1141990.297
+  Enumerable#slice_after { |obj| false }:
+    2.5.0: 1179656.454
+    2.6.0-preview1: 1150960.458
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]

@@ -1,9 +1,14 @@
 ---
 metrics_unit: i/s
 results:
-  dir_empty_p:
-    2.5.0: 3.904
-    2.6.0-preview1: 3.86
+  Hash#compact:
+    2.4.3: 1492881.938
+    2.5.0: 1514836.406
+    2.6.0-preview1: 1531998.794
+  Hash#compact!:
+    2.4.3: 2018010.092
+    2.5.0: 2113305.225
+    2.6.0-preview1: 2042711.031
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]

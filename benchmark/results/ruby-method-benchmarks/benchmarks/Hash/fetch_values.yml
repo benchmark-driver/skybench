@@ -1,9 +1,12 @@
 ---
 metrics_unit: i/s
 results:
-  dir_empty_p:
-    2.5.0: 3.904
-    2.6.0-preview1: 3.86
+  Hash#fetch_values(key, ...):
+    2.5.0: 7253129.345
+    2.6.0-preview1: 6767364.691
+  Hash#fetch_values(key, ...) { |key| ...}:
+    2.5.0: 6026490.323
+    2.6.0-preview1: 5616155.263
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]

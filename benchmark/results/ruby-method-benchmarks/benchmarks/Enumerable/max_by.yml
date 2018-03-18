@@ -1,9 +1,18 @@
 ---
 metrics_unit: i/s
 results:
-  dir_empty_p:
-    2.5.0: 3.904
-    2.6.0-preview1: 3.86
+  Enumerable#max_by:
+    2.5.0: 8890909.934
+    2.6.0-preview1: 8325050.721
+  Enumerable#max_by { |a, b| ...}:
+    2.5.0: 72788.487
+    2.6.0-preview1: 70738.225
+  Enumerable#max_by(n):
+    2.5.0: 7246668.155
+    2.6.0-preview1: 7200480.124
+  Enumerable#max_by(n) { |a, b| ...}:
+    2.5.0: 66116.456
+    2.6.0-preview1: 63860.213
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]

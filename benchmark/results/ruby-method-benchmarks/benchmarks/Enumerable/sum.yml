@@ -1,9 +1,24 @@
 ---
 metrics_unit: i/s
 results:
-  dir_empty_p:
-    2.5.0: 3.904
-    2.6.0-preview1: 3.86
+  Enumerable#sum:
+    2.5.0: 946003.77
+    2.6.0-preview1: 803636.128
+  Enumerable#sum(init):
+    2.5.0: 971991.804
+    2.6.0-preview1: 812997.445
+  Enumerable#sum with float:
+    2.5.0: 892004.458
+    2.6.0-preview1: 734119.454
+  Enumerable#sum { |obj| ...}:
+    2.5.0: 232839.212
+    2.6.0-preview1: 203284.471
+  Enumerable#sum(init) { |obj| ...}:
+    2.5.0: 226149.508
+    2.6.0-preview1: 197946.092
+  Enumerable#sum { |obj| ...} with float:
+    2.5.0: 182151.496
+    2.6.0-preview1: 171156.646
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
