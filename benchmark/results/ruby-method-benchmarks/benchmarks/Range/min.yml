@@ -4,15 +4,19 @@ results:
   Range#min:
     2.5.0: 50411700.614
     2.6.0-preview1: 57171418.868
+    r61465: 49725016.026
   Range#min(n):
     2.5.0: 3080582.746
     2.6.0-preview1: 2869240.458
+    r61465: 3255376.787
   Range#min { |a, b| ...}:
     2.5.0: 189160.31
     2.6.0-preview1: 181365.928
+    r61465: 177705.64
   Range#min(n) { |a, b| ...}:
     2.5.0: 134247.881
     2.6.0-preview1: 130801.451
+    r61465: 139746.311
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -21,3 +25,4 @@ descriptions:
   2.4.3: ruby 2.4.3p205 (2017-12-14 revision 61247) [x86_64-linux]
   2.5.0: ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
   2.6.0-preview1: ruby 2.6.0preview1 (2018-02-24 trunk 62554) [x86_64-linux]
+  r61465: ruby 2.5.0dev (2017-12-25 trunk 61465) [x86_64-linux]

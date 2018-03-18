@@ -4,33 +4,43 @@ results:
   String#upcase:
     2.5.0: 16718909.712
     2.6.0-preview1: 15758305.734
+    r61465: 17732444.727
   String#upcase(:ascii):
     2.5.0: 15163871.218
     2.6.0-preview1: 13843557.235
+    r61465: 16492510.273
   String#upcase(:turkic):
     2.5.0: 4950067.801
     2.6.0-preview1: 4838074.256
+    r61465: 5178752.249
   String#upcase(:lithuanian):
     2.5.0: 15944562.819
     2.6.0-preview1: 15467863.345
+    r61465: 16946875.13
   String#upcase(:turkic, :lithuanian):
     2.5.0: 4988085.338
     2.6.0-preview1: 4796961.331
+    r61465: 5256783.837
   String#upcase!:
     2.5.0: 24883352.216
     2.6.0-preview1: 23845343.731
+    r61465: 25712825.747
   String#upcase!(:ascii):
     2.5.0: 23323789.332
     2.6.0-preview1: 22390210.011
+    r61465: 24391233.057
   String#upcase!(:turkic):
     2.5.0: 5634206.277
     2.6.0-preview1: 5233071.162
+    r61465: 5828012.574
   String#upcase!(:lithuanian):
     2.5.0: 23873110.529
     2.6.0-preview1: 22898384.408
+    r61465: 24603054.131
   String#upcase!(:turkic, :lithuanian):
     2.5.0: 5580507.982
     2.6.0-preview1: 5128971.759
+    r61465: 5782683.795
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -39,3 +49,4 @@ descriptions:
   2.4.3: ruby 2.4.3p205 (2017-12-14 revision 61247) [x86_64-linux]
   2.5.0: ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
   2.6.0-preview1: ruby 2.6.0preview1 (2018-02-24 trunk 62554) [x86_64-linux]
+  r61465: ruby 2.5.0dev (2017-12-25 trunk 61465) [x86_64-linux]
