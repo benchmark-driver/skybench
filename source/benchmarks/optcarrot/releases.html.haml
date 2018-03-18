@@ -5,7 +5,7 @@
     = github_link 'benchmark-driver/optcarrot'
 
     :ruby
-      results = releases_results('optcarrot/benchmark.yml')
+      results = fetch_results('optcarrot/benchmark.yml', releases: true)
       locals = {
         vm_value_by_version_by_job: results.fetch('results'),
         description_by_version: results.fetch('descriptions'),

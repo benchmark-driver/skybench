@@ -38,29 +38,30 @@ helpers do
     File.join(File.expand_path('benchmark/results', __dir__), path)
   end
 
-  def releases_results(path)
-    original = YAML.load_file(result_path(path))
-    results = { 'metrics_unit' => original, 'descriptions' => {}, 'results' => {} }
+  def fetch_results(path, releases: true)
+    results = { 'descriptions' => {}, 'results' => {} }
 
-    original['descriptions'].each do |version, description|
-      unless revision?(version)
-        results['descriptions'][version] = description
+    Dir.glob(result_path(path)).sort.each do |yaml|
+      original = YAML.load_file(yaml)
+      results['metrics_unit'] = original.fetch('metrics_unit')
+
+      original['descriptions'].each do |version, description|
+        if (releases && !revision?(version)) || (!releases && revision?(version))
+          results['descriptions'][version] = description
+        end
       end
-    end
 
-    original['results'].each do |job, value_by_version|
-      value_by_version.each do |version, value|
-        unless revision?(version)
-          results['results'][job] ||= {}
-          results['results'][job][version] = value
+      original['results'].each do |job, value_by_version|
+        value_by_version.each do |version, value|
+          if (releases && !revision?(version)) || (!releases && revision?(version))
+            results['results'][job] ||= {}
+            results['results'][job][version] = value
+          end
         end
       end
     end
 
     results
-  end
-
-  def merged_releases_results(pattern)
   end
 
   private
