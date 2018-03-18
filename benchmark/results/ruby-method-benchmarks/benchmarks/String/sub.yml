@@ -11,6 +11,7 @@ results:
     2.6.0-preview1: 3521940.834
     r61465: 3750228.616
     r61469: 3759931.795
+    r61470: 3751851.939
   String#sub(pattern, replace) with string pattern:
     2.0.0-p648: 2248404.227
     2.1.10: 2395026.381
@@ -21,6 +22,7 @@ results:
     2.6.0-preview1: 3491616.806
     r61465: 3734485.165
     r61469: 3625316.917
+    r61470: 3708806.194
   String#sub(pattern, replace) replacing with global variable:
     2.0.0-p648: 1765684.814
     2.1.10: 1782846.668
@@ -31,6 +33,7 @@ results:
     2.6.0-preview1: 1838512.745
     r61465: 1903125.309
     r61469: 1941305.258
+    r61470: 1895303.136
   String#sub(pattern) { |matched| ...}:
     2.0.0-p648: 2613909.107
     2.1.10: 2790256.993
@@ -41,6 +44,7 @@ results:
     2.6.0-preview1: 2644103.762
     r61465: 3050814.269
     r61469: 3048400.847
+    r61470: 3049097.461
   String#sub!(pattern, replace):
     2.0.0-p648: 3267726.553
     2.1.10: 3476495.001
@@ -51,6 +55,7 @@ results:
     2.6.0-preview1: 3835692.214
     r61465: 4033783.466
     r61469: 4013881.7
+    r61470: 4049559.36
   String#sub!(pattern, replace) with string pattern:
     2.0.0-p648: 2432164.611
     2.1.10: 2608329.092
@@ -61,6 +66,7 @@ results:
     2.6.0-preview1: 3786156.05
     r61465: 3149363.005
     r61469: 3999670.557
+    r61470: 3959076.244
   String#sub!(pattern, replace) replacing with global variable:
     2.0.0-p648: 1913821.97
     2.1.10: 1902158.325
@@ -71,6 +77,7 @@ results:
     2.6.0-preview1: 1933963.849
     r61465: 2005384.317
     r61469: 2007808.338
+    r61470: 2004130.565
   String#sub!(pattern) { |matched| ...}:
     2.0.0-p648: 2887589.394
     2.1.10: 3073742.248
@@ -81,6 +88,7 @@ results:
     2.6.0-preview1: 3001637.339
     r61465: 3199666.77
     r61469: 3191897.549
+    r61470: 3210782.773
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -91,3 +99,4 @@ descriptions:
   2.6.0-preview1: ruby 2.6.0preview1 (2018-02-24 trunk 62554) [x86_64-linux]
   r61465: ruby 2.5.0dev (2017-12-25 trunk 61465) [x86_64-linux]
   r61469: ruby 2.5.0dev (2017-12-25 trunk 61469) [x86_64-linux]
+  r61470: ruby 2.5.0dev (2017-12-25 trunk 61470) [x86_64-linux]
