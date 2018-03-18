@@ -69,7 +69,7 @@ task :releases do
 end
 
 desc 'Update benchmarks for only the oldest revision'
-task :releases do
+task :revisions do
   all_revisions = IO.popen('rbenv versions --bare', &:read).split("\n").select { |v| v.match?(/\Ar\d+\z/) }
   repeat_count_by_pattern.each do |pattern, repeat_count|
     Dir.glob(File.join(definition_dir, pattern)).sort.each do |definition_yaml|
@@ -86,6 +86,7 @@ task :releases do
             versions << missing_revisions.first
           end
         end
+        versions.uniq!
       else
         versions = [all_revisions.first]
         FileUtils.mkdir_p(File.dirname(result_yaml))
@@ -110,5 +111,3 @@ task :releases do
     end
   end
 end
-
-task default: :releases
