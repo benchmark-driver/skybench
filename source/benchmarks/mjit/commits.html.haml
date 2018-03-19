@@ -4,4 +4,13 @@
 
     = github_link 'benchmark-driver/mjit-benchmarks'
 
-    %h3 WIP...
+    :ruby
+      results = fetch_results('mjit-benchmarks/benchmarks/*.yml', releases: false)
+      locals = {
+        vm_value_by_version_by_job: results.fetch('results'),
+        description_by_version: results.fetch('descriptions'),
+        metrics_unit: results.fetch('metrics_unit'),
+        width_percent: 70,
+        chart_type: 'line',
+      }
+    = partial '../graphs', locals: locals
