@@ -92,6 +92,11 @@ task :revisions do
         FileUtils.mkdir_p(File.dirname(result_yaml))
       end
 
+      # Prepend --jit for r62197+ https://github.com/ruby/ruby/commit/ed935aa5be0e5e6b8d53c3e7d76a9ce395dfa18b
+      versions += versions.select do |revision|
+        Integer(revision.delete_prefix('r')) >= 62197
+      end.map { |revision| "#{revision},--jit" }
+
       # Run benchmark if necessary
       unless versions.empty?
         Bundler.with_clean_env do
