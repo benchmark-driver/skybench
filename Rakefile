@@ -18,6 +18,7 @@ release_versions = [
   '2.4.3',
   '2.5.0',
   '2.6.0-preview1',
+  '2.6.0-preview1,--jit',
 ]
 
 desc 'Update releases'
@@ -38,7 +39,7 @@ task :releases do
             required_ruby_version = job['required_ruby_version']
           end
           if required_ruby_version
-            missing_versions.select! { |v| Gem::Version.new(v) >= Gem::Version.new(required_ruby_version) }
+            missing_versions.select! { |v| Gem::Version.new(v.sub(/,--jit\z/, '')) >= Gem::Version.new(required_ruby_version) }
           end
 
           versions |= missing_versions
