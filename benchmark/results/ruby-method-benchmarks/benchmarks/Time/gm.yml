@@ -44,6 +44,7 @@ results:
     r61500: 443544.441
     r61501: 437308.965
     r61502: 435791.1
+    r61503: 413283.575
   Time.gm(sec, min, hour, mday, mon, year, wday, yday, isdst, zone):
     2.0.0-p648: 375789.188
     2.1.10: 357126.868
@@ -87,6 +88,7 @@ results:
     r61500: 441722.242
     r61501: 442576.09
     r61502: 440179.212
+    r61503: 434496.424
   Time.utc(year, month, day, hour, min, sec, usec_with_frac):
     2.0.0-p648: 378112.951
     2.1.10: 372472.13
@@ -130,6 +132,7 @@ results:
     r61500: 435617.528
     r61501: 439557.976
     r61502: 427252.119
+    r61503: 441211.895
   Time.utc(sec, min, hour, mday, mon, year, wday, yday, isdst, zone):
     2.0.0-p648: 368842.795
     2.1.10: 367423.792
@@ -173,6 +176,7 @@ results:
     r61500: 441462.388
     r61501: 434935.226
     r61502: 443487.935
+    r61503: 388854.675
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -216,3 +220,4 @@ descriptions:
   r61501: ruby 2.6.0dev (2017-12-27 trunk 61501) [x86_64-linux]
   2.6.0-preview1,--jit: ruby 2.6.0preview1 (2018-02-24 trunk 62554) +JIT [x86_64-linux]
   r61502: ruby 2.6.0dev (2017-12-27 trunk 61502) [x86_64-linux]
+  r61503: ruby 2.6.0dev (2017-12-28 trunk 61503) [x86_64-linux]
