@@ -3,7 +3,7 @@
   require 'yaml'
 
   # Required Parameters:
-  # vm_value_by_version_by_job
+  # value_by_version_by_job
   # description_by_version
   # metrics_unit
 
@@ -13,20 +13,22 @@
 
 #graph_metadata{ 'data-unit': metrics_unit, 'data-type': chart_type }
 
-- if vm_value_by_version_by_job.size > 1
+- if value_by_version_by_job.size > 1
   %ul.nav.nav-pills.benchmark_navbar
-    - vm_value_by_version_by_job.each_with_index do |(job, vm_value_by_version), index|
+    - value_by_version_by_job.each_with_index do |(job, value_by_version), index|
       %li{ class: ('active' if index == 0) }
         %a.activate-chart{ href: '#', 'data-id': "chart-#{index}" }= job
 
-- versions = description_by_version.keys
-- vm_value_by_version_by_job.each_with_index do |(job, vm_value_by_version), index|
+- versions = description_by_version.keys.reject { |v| v.end_with?(',--jit') }
+- value_by_version_by_job.each_with_index do |(job, value_by_version), index|
   :ruby
-    vm_values = versions.map { |version| vm_value_by_version[version] }
+    vm_values = versions.map { |version| value_by_version[version] }
+    jit_values = versions.map { |version| value_by_version["#{version},--jit"] }
 
     graph_data = {
       'data-versions': versions.map { |v| "Ruby: #{v}<br>#{description_by_version.fetch(v)}" }.to_json,
       'data-vm-values': vm_values.to_json,
+      'data-jit-values': jit_values.to_json,
     }
   .benchmark_graph{ graph_data, id: "chart-#{index}", 'data-name': job, style: "width: #{width_percent}%;" }
 
@@ -61,6 +63,9 @@
         series: [{
           name: name,
           data: graphElement.data('vm-values')
+        },{
+          name: name + " +JIT",
+          data: graphElement.data('jit-values')
         }]
       });
     };

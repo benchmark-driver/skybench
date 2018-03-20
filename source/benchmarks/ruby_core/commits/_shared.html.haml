@@ -6,9 +6,9 @@
 
     :ruby
       results = fetch_results('ruby-benchmarks/benchmarks/*.yml', releases: false)
-      vm_value_by_version_by_job = results.fetch('results').select { |k, v| k.split(/_|\./).first == prefix }.to_h
+      value_by_version_by_job = results.fetch('results').select { |k, v| k.split(/_|\./).first == prefix }.to_h
       locals = {
-        vm_value_by_version_by_job: vm_value_by_version_by_job,
+        value_by_version_by_job: value_by_version_by_job,
         description_by_version: results.fetch('descriptions'),
         metrics_unit: results.fetch('metrics_unit'),
         width_percent: 70,
