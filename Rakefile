@@ -82,10 +82,13 @@ task :revisions do
         versions = []
         YAML.load_file(result_yaml).fetch('results').each do |name, results|
           # Select missing versions
-          missing_revisions = all_revisions - (results || {}).keys
+          finished_revisions = all_revisions & (results || {}).keys
+          missing_revisions = all_revisions - finished_revisions
+
           unless missing_revisions.empty?
-            if missing_revisions.size > 10
-              versions << missing_revisions[10]
+            future_revisions = missing_revisions.select { |r| r > finished_revisions.last }
+            if future_revisions.size > 10
+              versions << future_revisions[10]
             else
               versions << missing_revisions.last
             end
