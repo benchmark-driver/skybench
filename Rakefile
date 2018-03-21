@@ -84,7 +84,11 @@ task :revisions do
           # Select missing versions
           missing_revisions = all_revisions - (results || {}).keys
           unless missing_revisions.empty?
-            versions << missing_revisions.first
+            if missing_revisions.size > 10
+              versions << missing_revisions[10]
+            else
+              versions << missing_revisions.last
+            end
           end
         end
         versions.uniq!
