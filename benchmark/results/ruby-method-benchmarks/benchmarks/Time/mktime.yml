@@ -52,6 +52,7 @@ results:
     r61508: 243098.417
     r61509: 242281.909
     r61510: 241248.226
+    r61521: 235496.102
   Time.mktime(sec, min, hour, mday, mon, year, wday, yday, isdst, zone):
     2.0.0-p648: 233868.277
     2.1.10: 230757.005
@@ -103,6 +104,7 @@ results:
     r61508: 239952.733
     r61509: 241392.457
     r61510: 237807.396
+    r61521: 243110.509
   Time.local(year, month, day, hour, min, sec, usec_with_frac):
     2.0.0-p648: 236763.826
     2.1.10: 234859.588
@@ -154,6 +156,7 @@ results:
     r61508: 242109.572
     r61509: 236936.721
     r61510: 240288.346
+    r61521: 239682.999
   Time.local(sec, min, hour, mday, mon, year, wday, yday, isdst, zone):
     2.0.0-p648: 234387.656
     2.1.10: 230627.461
@@ -205,6 +208,7 @@ results:
     r61508: 239085.08
     r61509: 231513.961
     r61510: 233342.161
+    r61521: 238893.175
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -256,3 +260,4 @@ descriptions:
   r61508: ruby 2.6.0dev (2017-12-28 trunk 61508) [x86_64-linux]
   r61509: ruby 2.6.0dev (2017-12-28 trunk 61509) [x86_64-linux]
   r61510: ruby 2.6.0dev (2017-12-28 trunk 61510) [x86_64-linux]
+  r61521: ruby 2.6.0dev (2017-12-31 trunk 61521) [x86_64-linux]
