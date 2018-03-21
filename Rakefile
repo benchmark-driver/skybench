@@ -106,9 +106,8 @@ task :revisions do
           else
             # Skip 7 days
             min_date = latest_ruby_revision.date + 7
-            if revision = all_revisions.find { |r| RubyRevision.new(r).date >= min_date }
-              versions << revision
-            end
+            revision = all_revisions.find { |r| RubyRevision.new(r).date >= min_date }
+            versions << revision
           end
         end
         versions.uniq!
