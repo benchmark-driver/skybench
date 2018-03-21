@@ -2,6 +2,7 @@ require 'bundler'
 require 'fileutils'
 require 'shellwords'
 require 'yaml'
+require 'date'
 
 definition_dir = File.expand_path('benchmark/definitions', __dir__)
 repeat_count_by_pattern = {
@@ -20,6 +21,18 @@ release_versions = [
   '2.6.0-preview1',
   '2.6.0-preview1,--jit',
 ]
+
+class RubyRevision
+  def initialize(revision)
+    @revision = revision
+    @number = Integer(revision.sub(/\Ar/, ''))
+    description = IO.popen({ 'RBENV_VERSION' => revision }, ['ruby', '-v'], &:read).rstrip
+    date_str = description.match(/\A[^\(]+\(([^ ]+) /)[1]
+    @date = Date.parse(date_str)
+  end
+
+  attr_reader :revision, :number, :date
+end
 
 desc 'Update releases'
 task :releases do
@@ -81,10 +94,22 @@ task :revisions do
       if File.exist?(result_yaml)
         versions = []
         YAML.load_file(result_yaml).fetch('results').each do |name, results|
-          # Select missing versions
-          missing_revisions = all_revisions - (results || {}).keys
-          unless missing_revisions.empty?
-            versions << missing_revisions.first
+          # Find latest finished revision
+          finished_revisions = all_revisions & (results || {}).keys
+          latest_ruby_revision = RubyRevision.new(finished_revisions.sort { |r| Integer(r.sub(/\Ar/, '')) }.last)
+          if latest_ruby_revision.date == Date.today
+            # From missing revisions, fill from latest
+            missing_revisions = all_revisions - (results || {}).keys
+            unless missing_revisions.empty?
+              versions << missing_revisions.last
+            end
+          else
+            # Skip 7 days
+            min_date = latest_ruby_revision.date + 7
+            revision = all_revisions.find { |r| RubyRevision.new(r).date >= min_date }
+            unless missing_revisions.empty?
+              versions << revision
+            end
           end
         end
         versions.uniq!
