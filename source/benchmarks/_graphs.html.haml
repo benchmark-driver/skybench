@@ -19,9 +19,9 @@
       %li{ class: ('active' if index == 0) }
         %a.activate-chart{ href: '#', 'data-id': "chart-#{index}" }= job
 
-- versions = description_by_version.keys.reject { |v| v.end_with?(',--jit') }
 - value_by_version_by_job.each_with_index do |(job, value_by_version), index|
   :ruby
+    versions = value_by_version.keys.reject { |v| v.end_with?(',--jit') }
     vm_values = versions.map { |version| value_by_version[version] }
     jit_values = versions.map { |version| value_by_version["#{version},--jit"] }
 

@@ -67,7 +67,7 @@ helpers do
   private
 
   def revision?(name)
-    name.match?(/\Ar\d+\z/)
+    name.match?(/\Ar\d+(,--jit)?\z/)
   end
 end
 
