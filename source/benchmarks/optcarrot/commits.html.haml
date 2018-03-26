@@ -5,10 +5,13 @@
     = github_link 'benchmark-driver/optcarrot'
 
     :ruby
+      results = fetch_results('optcarrot/benchmark.yml', releases: false)
       locals = {
-        yaml_path: result_path('optcarrot_commits.yml'),
+        value_by_version_by_job: results.fetch('results'),
+        description_by_version: results.fetch('descriptions'),
+        metrics_unit: results.fetch('metrics_unit'),
         width_percent: 100,
         chart_type: 'line',
         show_table: true,
       }
-    = partial '../legacy_graphs', locals: locals
+    = partial '../graphs', locals: locals
