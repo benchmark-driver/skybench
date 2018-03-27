@@ -21,6 +21,24 @@ release_versions = [
   '2.6.0-preview1,--jit',
 ]
 
+module BenchmarkRunner
+  def self.run(result_yaml:, definition_yaml:, versions:, repeat_count:)
+    Bundler.with_clean_env do
+      ENV['RESULT_YAML'] = result_yaml
+      command = [
+        'bin/benchmark-driver', '-o', 'skybench', definition_yaml,
+        '--rbenv', versions.join(';'),
+        '--repeat-count', repeat_count.to_s,
+      ].shelljoin
+
+      puts "+ #{command}"
+      unless system(command) # Keep running even on failure of each benchmark execution
+        puts "Failed to execute: #{command}"
+      end
+    end
+  end
+end
+
 desc 'Update releases'
 task :releases do
   repeat_count_by_pattern.each do |pattern, repeat_count|
@@ -100,25 +118,27 @@ task :revisions do
         FileUtils.mkdir_p(File.dirname(result_yaml))
       end
 
-      # Prepend --jit for r62197+ https://github.com/ruby/ruby/commit/ed935aa5be0e5e6b8d53c3e7d76a9ce395dfa18b
-      versions += versions.select do |revision|
-        Integer(revision.delete_prefix('r')) >= 62197
-      end.map { |revision| "#{revision},--jit" }
-
       # Run benchmark if necessary
       unless versions.empty?
-        Bundler.with_clean_env do
-          ENV['RESULT_YAML'] = result_yaml
-          command = [
-            'bin/benchmark-driver', '-o', 'skybench', definition_yaml,
-            '--rbenv', versions.join(';'),
-            '--repeat-count', repeat_count.to_s,
-          ].shelljoin
+        BenchmarkRunner.run(
+          result_yaml: result_yaml,
+          definition_yaml: definition_yaml,
+          versions: versions,
+          repeat_count: repeat_count,
+        )
 
-          puts "+ #{command}"
-          unless system(command) # Keep running even on failure of each benchmark execution
-            puts "Failed to execute: #{command}"
-          end
+        # Run --jit for r62197+ https://github.com/ruby/ruby/commit/ed935aa5be0e5e6b8d53c3e7d76a9ce395dfa18b
+        jit_versions = versions.select do |revision|
+          Integer(revision.delete_prefix('r')) >= 62197
+        end.map { |revision| "#{revision},--jit" }
+
+        unless jit_versions.empty?
+          BenchmarkRunner.run(
+            result_yaml: result_yaml,
+            definition_yaml: definition_yaml,
+            versions: jit_versions,
+            repeat_count: repeat_count,
+          )
         end
       end
     end
