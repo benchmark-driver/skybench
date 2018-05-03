@@ -374,6 +374,8 @@ results:
     r63328,--jit: 8828450.624
     r63330: 9258182.111
     r63330,--jit: 8863538.757
+    r63331: 9269185.398
+    r63331,--jit: 8806755.473
   Enumerable#each_with_index { |obj, index| ...}:
     2.0.0-p648: 233011.891
     2.1.10: 227468.118
@@ -747,6 +749,8 @@ results:
     r63328,--jit: 239662.51
     r63330: 240948.997
     r63330,--jit: 253345.328
+    r63331: 248139.97
+    r63331,--jit: 255683.012
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -1120,3 +1124,5 @@ descriptions:
   r63328,--jit: ruby 2.6.0dev (2018-05-03 trunk 63328) +JIT [x86_64-linux]
   r63330: ruby 2.6.0dev (2018-05-03 trunk 63330) [x86_64-linux]
   r63330,--jit: ruby 2.6.0dev (2018-05-03 trunk 63330) +JIT [x86_64-linux]
+  r63331: ruby 2.6.0dev (2018-05-03 trunk 63331) [x86_64-linux]
+  r63331,--jit: ruby 2.6.0dev (2018-05-03 trunk 63331) +JIT [x86_64-linux]
