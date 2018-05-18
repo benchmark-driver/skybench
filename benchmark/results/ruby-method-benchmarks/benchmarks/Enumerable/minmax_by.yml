@@ -504,6 +504,8 @@ results:
     r63461,--jit: 4947995.006
     r63463: 5658555.303
     r63463,--jit: 5293090.028
+    r63464: 5283649.531
+    r63464,--jit: 4988827.751
   Enumerable#minmax_by { |a, b| ...}:
     2.5.0: 61134.377
     2.6.0-preview1: 58717.714
@@ -1007,6 +1009,8 @@ results:
     r63461,--jit: 60318.699
     r63463: 61466.77
     r63463,--jit: 59485.582
+    r63464: 58058.157
+    r63464,--jit: 59864.131
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -1516,3 +1520,5 @@ descriptions:
   r63459,--jit: ruby 2.6.0dev (2018-05-18 trunk 63459) +JIT [x86_64-linux]
   r63463: ruby 2.6.0dev (2018-05-18 trunk 63463) [x86_64-linux]
   r63463,--jit: ruby 2.6.0dev (2018-05-18 trunk 63463) +JIT [x86_64-linux]
+  r63464: ruby 2.6.0dev (2018-05-18 trunk 63464) [x86_64-linux]
+  r63464,--jit: ruby 2.6.0dev (2018-05-18 trunk 63464) +JIT [x86_64-linux]
