@@ -18,7 +18,7 @@ release_versions = [
   '2.4.3',
   '2.5.0',
   '2.6.0-preview1',
-  '2.6.0-preview1,--jit',
+  '2.6.0-preview1 --jit',
 ]
 
 module BenchmarkRunner
@@ -57,7 +57,7 @@ task :releases do
             required_ruby_version = job['required_ruby_version']
           end
           if required_ruby_version
-            missing_versions.select! { |v| Gem::Version.new(v.sub(/,--jit\z/, '')) >= Gem::Version.new(required_ruby_version) }
+            missing_versions.select! { |v| Gem::Version.new(v.sub(/ --jit\z/, '')) >= Gem::Version.new(required_ruby_version) }
           end
 
           versions |= missing_versions
@@ -130,7 +130,7 @@ task :revisions do
         # Run --jit for r62197+ https://github.com/ruby/ruby/commit/ed935aa5be0e5e6b8d53c3e7d76a9ce395dfa18b
         jit_versions = versions.select do |revision|
           Integer(revision.delete_prefix('r')) >= 62197
-        end.map { |revision| "#{revision},--jit" }
+        end.map { |revision| "#{revision} --jit" }
 
         unless jit_versions.empty?
           BenchmarkRunner.run(
