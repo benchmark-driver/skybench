@@ -11,9 +11,9 @@
 
 - results.each do |name, value_by_version|
   :ruby
-    versions = value_by_version.keys.map { |v| v.sub(/,--jit\z/, '') }.uniq
+    versions = value_by_version.keys.map { |v| v.sub(/ --jit\z/, '') }.uniq
     vm_values = versions.map { |version| value_by_version[version] }
-    jit_values = versions.map { |version| value_by_version["#{version},--jit"] }
+    jit_values = versions.map { |version| value_by_version["#{version} --jit"] }
 
     graph_data = {
       'data-versions': versions.to_json,

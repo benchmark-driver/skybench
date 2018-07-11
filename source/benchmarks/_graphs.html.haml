@@ -21,9 +21,9 @@
 
 - value_by_version_by_job.each_with_index do |(job, value_by_version), index|
   :ruby
-    versions = value_by_version.keys.reject { |v| v.end_with?(',--jit') }
+    versions = value_by_version.keys.reject { |v| v.end_with?(' --jit') }
     vm_values = versions.map { |version| value_by_version[version] }
-    jit_values = versions.map { |version| value_by_version["#{version},--jit"] }
+    jit_values = versions.map { |version| value_by_version["#{version} --jit"] }
 
     graph_data = {
       'data-versions': versions.map { |v| "Ruby: #{v}<br>#{description_by_version.fetch(v)}" }.to_json,
