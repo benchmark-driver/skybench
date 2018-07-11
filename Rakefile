@@ -27,7 +27,7 @@ module BenchmarkRunner
       ENV['RESULT_YAML'] = result_yaml
       command = [
         'bin/benchmark-driver', '-o', 'skybench', definition_yaml,
-        '--rbenv', versions.join(';'),
+        '--rbenv', versions.join(';'), '--timeout', '60',
         '--repeat-count', repeat_count.to_s,
       ].shelljoin
 
