@@ -1,4 +1,4 @@
-require 'benchmark_driver/output/skybench/version'
+require 'benchmark_driver'
 require 'yaml'
 
 class BenchmarkDriver::Output::Skybench

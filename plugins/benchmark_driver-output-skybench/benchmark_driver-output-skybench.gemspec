@@ -1,10 +1,9 @@
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "benchmark_driver/output/skybench"
 
 Gem::Specification.new do |spec|
   spec.name          = "benchmark_driver-output-skybench"
-  spec.version       = BenchmarkDriver::Output::Skybench::VERSION
+  spec.version       = "0.1.0"
   spec.authors       = ["Takashi Kokubun"]
   spec.email         = ["takashikkbn@gmail.com"]
 
