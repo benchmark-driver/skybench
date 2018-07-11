@@ -628,6 +628,8 @@ results:
     r63700 --jit: 10686289.14
     r63711: 11336475.898
     r63711 --jit: 10935980.353
+    r63722: 11133263.834
+    r63722 --jit: 10468238.828
   String#center(width, padding):
     2.0.0-p648: 5483503.454
     2.1.10: 5923000.128
@@ -1255,6 +1257,8 @@ results:
     r63700 --jit: 8072703.356
     r63711: 8566442.906
     r63711 --jit: 8186061.917
+    r63722: 8464316.543
+    r63722 --jit: 7995701.677
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -1882,3 +1886,5 @@ descriptions:
   r63700 --jit: ruby 2.6.0dev (2018-06-20 trunk 63700) +JIT [x86_64-linux]
   r63711: ruby 2.6.0dev (2018-06-21 trunk 63711) [x86_64-linux]
   r63711 --jit: ruby 2.6.0dev (2018-06-21 trunk 63711) +JIT [x86_64-linux]
+  r63722: ruby 2.6.0dev (2018-06-22 trunk 63722) [x86_64-linux]
+  r63722 --jit: ruby 2.6.0dev (2018-06-22 trunk 63722) +JIT [x86_64-linux]
