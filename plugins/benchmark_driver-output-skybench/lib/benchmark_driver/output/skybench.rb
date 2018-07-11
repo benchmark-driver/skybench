@@ -2,14 +2,13 @@ require 'benchmark_driver/output/skybench/version'
 require 'yaml'
 
 class BenchmarkDriver::Output::Skybench
-  # @param [BenchmarkDriver::Metrics::Type] metrics_type
-  attr_writer :metrics_type
-
-  # @param [Array<BenchmarkDriver::*::Job>] jobs
-  # @param [Array<BenchmarkDriver::Config::Executable>] executables
-  def initialize(jobs:, executables:)
+  # @param [Array<BenchmarkDriver::Metric>] metrics
+  # @param [Array<BenchmarkDriver::Job>] jobs
+  # @param [Array<BenchmarkDriver::Context>] contexts
+  def initialize(metrics:, jobs:, contexts:)
     @jobs = jobs
-    @executables = executables
+    @contexts = contexts
+    @metrics = metrics
     @result = StringIO.new
   end
 
@@ -20,10 +19,10 @@ class BenchmarkDriver::Output::Skybench
 
   def with_benchmark(&block)
     @with_benchmark = true
-    doubly_puts "metrics_unit: #{@metrics_type.unit}"
+    doubly_puts "metrics_unit: #{@metrics.first.unit}"
     doubly_puts 'descriptions:'
-    @executables.each do |executable|
-      doubly_puts "  #{executable.name}: #{executable.description.dump}"
+    @contexts.each do |context|
+      doubly_puts "  #{context.name}: #{context.executable.description.dump}"
     end
     doubly_puts 'results:'
 
@@ -38,6 +37,8 @@ class BenchmarkDriver::Output::Skybench
     @result.close
 
     result
+  ensure
+    @with_benchmark = false
   end
 
   def with_job(job, &block)
@@ -47,10 +48,15 @@ class BenchmarkDriver::Output::Skybench
     block.call
   end
 
+  def with_context(context, &block)
+    @context = context
+    block.call
+  end
+
   # @param [BenchmarkDriver::Metrics] metrics
-  def report(metrics)
+  def report(result)
     if @with_benchmark
-      doubly_puts("    #{metrics.executable.name}: %6.3f" % metrics.value)
+      doubly_puts("    #{@context.executable.name}: %6.3f" % result.values.values.first)
     end
   end
 
