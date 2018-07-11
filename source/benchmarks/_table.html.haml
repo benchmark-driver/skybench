@@ -1,9 +1,7 @@
 :ruby
   results = [
-    { name: 'Ruby Core',   prefix: 'ruby_core',   description: 'Official Benchmark set in Ruby repository', categories: %w[app array bighash dir erb file hash int io loop marshal securerandom so string time vm1 vm2 vm3 vm] },
     { name: 'Ruby Method', prefix: 'ruby_method', description: 'Ruby method benchmark set created by Watson1978', categories: %w[Array Enumerable Hash Range String Time] },
     { name: 'MJIT',        prefix: 'mjit',        description: 'Benchmark set created by Vladimir Makarov' },
-    { name: 'Optcarrot',   prefix: 'optcarrot',   description: 'Benchmark created by Yusuke Endoh' },
   ]
 - results.each do |definition|
   %h2.text-center= definition.fetch(:name)
