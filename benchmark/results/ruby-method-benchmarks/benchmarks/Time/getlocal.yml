@@ -646,6 +646,8 @@ results:
     r63799 --jit: 749613.821
     r63816: 808422.462
     r63816 --jit: 765742.364
+    r63833: 824882.86
+    r63833 --jit: 791748.944
   Time#getlocal(utc_offset):
     2.0.0-p648: 615696.26
     2.1.10: 590075.081
@@ -1291,6 +1293,8 @@ results:
     r63799 --jit: 710400.612
     r63816: 757669.542
     r63816 --jit: 709604.77
+    r63833: 751144.352
+    r63833 --jit: 707293.679
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -1936,3 +1940,5 @@ descriptions:
   r63799 --jit: ruby 2.6.0dev (2018-06-30 trunk 63799) +JIT [x86_64-linux]
   r63816: ruby 2.6.0dev (2018-07-01 trunk 63816) [x86_64-linux]
   r63816 --jit: ruby 2.6.0dev (2018-07-01 trunk 63816) +JIT [x86_64-linux]
+  r63833: ruby 2.6.0dev (2018-07-03 trunk 63833) [x86_64-linux]
+  r63833 --jit: ruby 2.6.0dev (2018-07-03 trunk 63833) +JIT [x86_64-linux]
