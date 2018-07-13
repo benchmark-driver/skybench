@@ -75,9 +75,20 @@
       event.preventDefault();
       $('.benchmark_navbar li').removeClass('active');
       $(this).closest('li').addClass('active');
-      var graphElement = $("#" + $(this).data('id'));
+      var id = $(this).data('id');
+      var graphElement = $("#" + id);
       activateChart(graphElement);
+      window.location.hash = id;
     });
 
-    activateChart($('.benchmark_graph#chart-0'));
+    var url = document.location.toString();
+    if (url.match('#chart-')) {
+      var id = url.split('#')[1];
+      $('.benchmark_navbar li').removeClass('active');
+      activateChart($('.benchmark_graph#' + id));
+      $('.activate-chart[data-id=' + id + ']').closest('li').addClass('active');
+    }
+    else {
+      activateChart($('.benchmark_graph#chart-0'));
+    }
   });
