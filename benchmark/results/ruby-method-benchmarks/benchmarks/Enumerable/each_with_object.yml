@@ -738,6 +738,8 @@ results:
     r63980 --jit: 6479799.009
     r63981: 6763910.791
     r63981 --jit: 6420293.23
+    r63984: 6749224.013
+    r63984 --jit: 6293148.253
     r63985: 6751446.042
     r63985 --jit: 6426208.213
   Enumerable#each_with_object(obj) { |(*args), memo_obj| ...}:
@@ -1477,6 +1479,8 @@ results:
     r63980 --jit: 208688.97
     r63981: 194112.194
     r63981 --jit: 210490.681
+    r63984: 198798.323
+    r63984 --jit: 207941.386
     r63985: 196859.427
     r63985 --jit: 201393.947
 descriptions:
@@ -2218,3 +2222,5 @@ descriptions:
   r63947 --jit: ruby 2.6.0dev (2018-07-11 trunk 63947) +JIT [x86_64-linux]
   r63985: ruby 2.6.0dev (2018-07-17 trunk 63985) [x86_64-linux]
   r63985 --jit: ruby 2.6.0dev (2018-07-17 trunk 63985) +JIT [x86_64-linux]
+  r63984: ruby 2.6.0dev (2018-07-17 trunk 63984) [x86_64-linux]
+  r63984 --jit: ruby 2.6.0dev (2018-07-17 trunk 63984) +JIT [x86_64-linux]
