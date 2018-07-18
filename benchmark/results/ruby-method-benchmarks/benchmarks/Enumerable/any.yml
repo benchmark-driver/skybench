@@ -766,6 +766,8 @@ results:
     r63992 --jit: 6104066.92
     r63993: 6240188.383
     r63993 --jit: 5968465.786
+    r63994: 6210171.226
+    r63994 --jit: 6087270.956
   Enumerable#any? { |obj| false }:
     2.0.0-p648: 290249.932
     2.1.10: 266229.085
@@ -1531,6 +1533,8 @@ results:
     r63992 --jit: 295554.643
     r63993: 267489.806
     r63993 --jit: 297492.862
+    r63994: 276608.12
+    r63994 --jit: 293488.439
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -2296,3 +2300,5 @@ descriptions:
   r63945 --jit: ruby 2.6.0dev (2018-07-11 trunk 63945) +JIT [x86_64-linux]
   r63993: ruby 2.6.0dev (2018-07-18 trunk 63993) [x86_64-linux]
   r63993 --jit: ruby 2.6.0dev (2018-07-18 trunk 63993) +JIT [x86_64-linux]
+  r63994: ruby 2.6.0dev (2018-07-18 trunk 63994) [x86_64-linux]
+  r63994 --jit: ruby 2.6.0dev (2018-07-18 trunk 63994) +JIT [x86_64-linux]
