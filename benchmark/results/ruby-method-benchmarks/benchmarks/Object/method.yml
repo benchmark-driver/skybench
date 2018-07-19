@@ -1,0 +1,23 @@
+---
+metrics_unit: i/s
+results:
+  Object#method(symbol):
+    2.0.0-p648: 4632897.668
+    2.1.10: 3846197.665
+    2.2.9: 3955275.612
+    2.3.6: 9381189.074
+    2.4.3: 9410864.385
+    2.5.0: 9057764.557
+    2.6.0-preview1: 9137838.237
+    2.6.0-preview1 --jit: 8863225.219
+    r61478: 9031840.282
+descriptions:
+  2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
+  2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
+  2.2.9: ruby 2.2.9p480 (2017-12-15 revision 61259) [x86_64-linux]
+  2.3.6: ruby 2.3.6p384 (2017-12-14 revision 61254) [x86_64-linux]
+  2.4.3: ruby 2.4.3p205 (2017-12-14 revision 61247) [x86_64-linux]
+  2.5.0: ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
+  2.6.0-preview1: ruby 2.6.0preview1 (2018-02-24 trunk 62554) [x86_64-linux]
+  2.6.0-preview1 --jit: ruby 2.6.0preview1 (2018-02-24 trunk 62554) +JIT [x86_64-linux]
+  r61478: ruby 2.6.0dev (2017-12-26 trunk 61478) [x86_64-linux]
