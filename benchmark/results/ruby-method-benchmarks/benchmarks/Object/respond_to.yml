@@ -11,6 +11,7 @@ results:
     2.6.0-preview1: 46748530.605
     2.6.0-preview1 --jit: 44184940.992
     r61478: 45607857.793
+    r61489: 45472376.468
   Object#respond_to?(symbol, true):
     2.0.0-p648: 32590327.936
     2.1.10: 29186559.399
@@ -21,6 +22,7 @@ results:
     2.6.0-preview1: 43979191.281
     2.6.0-preview1 --jit: 42857092.745
     r61478: 45082273.117
+    r61489: 42642288.016
   Object#respond_to?(symbol) with respond_to_missing:
     2.0.0-p648: 14157914.481
     2.1.10: 13822132.902
@@ -31,6 +33,7 @@ results:
     2.6.0-preview1: 18428936.058
     2.6.0-preview1 --jit: 16604036.675
     r61478: 18070437.27
+    r61489: 18066340.76
   Object#respond_to?(string):
     2.0.0-p648: 8796443.531
     2.1.10: 9131216.51
@@ -41,6 +44,7 @@ results:
     2.6.0-preview1: 13640468.434
     2.6.0-preview1 --jit: 14061613.948
     r61478: 14122701.248
+    r61489: 14118031.121
   Object#respond_to?(string, true):
     2.0.0-p648: 8768317.088
     2.1.10: 9109581.02
@@ -51,6 +55,7 @@ results:
     2.6.0-preview1: 13462790.251
     2.6.0-preview1 --jit: 13896643.98
     r61478: 14098015.297
+    r61489: 14439811.176
   Object#respond_to?(string) with respond_to_missing:
     2.0.0-p648: 6421499.974
     2.1.10: 6542473.326
@@ -61,6 +66,7 @@ results:
     2.6.0-preview1: 7686971.421
     2.6.0-preview1 --jit: 7656492.416
     r61478: 7749711.337
+    r61489: 7717597.651
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -71,3 +77,4 @@ descriptions:
   2.6.0-preview1: ruby 2.6.0preview1 (2018-02-24 trunk 62554) [x86_64-linux]
   2.6.0-preview1 --jit: ruby 2.6.0preview1 (2018-02-24 trunk 62554) +JIT [x86_64-linux]
   r61478: ruby 2.6.0dev (2017-12-26 trunk 61478) [x86_64-linux]
+  r61489: ruby 2.6.0dev (2017-12-27 trunk 61489) [x86_64-linux]
