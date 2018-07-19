@@ -102,7 +102,10 @@ task :revisions do
           missing_revisions = all_revisions - finished_revisions
 
           unless missing_revisions.empty?
-            future_revisions = missing_revisions.select { |r| r > finished_revisions.last }
+            future_revisions = missing_revisions
+            unless finished_revisions.empty?
+              future_revisions = future_revisions.select { |r| r > finished_revisions.last }
+            end
             if future_revisions.size > 10
               versions << future_revisions[10]
             else
