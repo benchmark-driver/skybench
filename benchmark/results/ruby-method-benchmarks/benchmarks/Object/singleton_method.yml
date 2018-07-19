@@ -2,11 +2,35 @@
 metrics_unit: i/s
 results:
   Object#singleton_method(symbol):
+    2.1.10: 3746892.489
+    2.2.9: 3674074.445
+    2.3.6: 7970093.046
+    2.4.3: 8151654.186
+    2.5.0: 8009504.907
+    2.6.0-preview1: 8157873.168
+    2.6.0-preview1 --jit: 7976358.078
     r61465: 8221061.465
     r61479: 8189700.796
+    r61490: 7881273.583
   Object#singleton_method(string):
+    2.1.10: 2979261.562
+    2.2.9: 2901856.884
+    2.3.6: 5602571.757
+    2.4.3: 5622312.515
+    2.5.0: 5789099.389
+    2.6.0-preview1: 5627251.21
+    2.6.0-preview1 --jit: 5658550.35
     r61465: 5790854.265
     r61479: 5843028.697
+    r61490: 5576655.216
 descriptions:
   r61465: ruby 2.5.0dev (2017-12-25 trunk 61465) [x86_64-linux]
   r61479: ruby 2.6.0dev (2017-12-26 trunk 61479) [x86_64-linux]
+  2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
+  2.2.9: ruby 2.2.9p480 (2017-12-15 revision 61259) [x86_64-linux]
+  2.3.6: ruby 2.3.6p384 (2017-12-14 revision 61254) [x86_64-linux]
+  2.4.3: ruby 2.4.3p205 (2017-12-14 revision 61247) [x86_64-linux]
+  2.5.0: ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
+  2.6.0-preview1: ruby 2.6.0preview1 (2018-02-24 trunk 62554) [x86_64-linux]
+  2.6.0-preview1 --jit: ruby 2.6.0preview1 (2018-02-24 trunk 62554) +JIT [x86_64-linux]
+  r61490: ruby 2.6.0dev (2017-12-27 trunk 61490) [x86_64-linux]
