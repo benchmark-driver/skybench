@@ -798,6 +798,8 @@ results:
     r64003 --jit: 8706542.153
     r64004: 9123732.266
     r64004 --jit: 8763727.192
+    r64006: 9159105.122
+    r64006 --jit: 8787015.446
   Enumerable#reverse_each { |obj| ...}:
     2.0.0-p648: 192069.363
     2.1.10: 189548.083
@@ -1595,6 +1597,8 @@ results:
     r64003 --jit: 200418.452
     r64004: 192155.932
     r64004 --jit: 200628.378
+    r64006: 188521.832
+    r64006 --jit: 195897.774
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -2392,3 +2396,5 @@ descriptions:
   r63940 --jit: ruby 2.6.0dev (2018-07-11 trunk 63940) +JIT [x86_64-linux]
   r63939: ruby 2.6.0dev (2018-07-11 trunk 63939) [x86_64-linux]
   r63939 --jit: ruby 2.6.0dev (2018-07-11 trunk 63939) +JIT [x86_64-linux]
+  r64006: ruby 2.6.0dev (2018-07-21 trunk 64006) [x86_64-linux]
+  r64006 --jit: ruby 2.6.0dev (2018-07-21 trunk 64006) +JIT [x86_64-linux]
