@@ -802,6 +802,8 @@ results:
     r64005 --jit: 8809946.005
     r64006: 9182249.441
     r64006 --jit: 8737972.369
+    r64007: 9024467.016
+    r64007 --jit: 8708344.605
   Enumerable#each_entry { |obj| ...}:
     2.0.0-p648: 292483.82
     2.1.10: 269998.939
@@ -1603,6 +1605,8 @@ results:
     r64005 --jit: 281546.447
     r64006: 262249.442
     r64006 --jit: 269915.8
+    r64007: 261199.084
+    r64007 --jit: 268002.329
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -2404,3 +2408,5 @@ descriptions:
   r64006 --jit: ruby 2.6.0dev (2018-07-21 trunk 64006) +JIT [x86_64-linux]
   r64005: ruby 2.6.0dev (2018-07-20 trunk 64005) [x86_64-linux]
   r64005 --jit: ruby 2.6.0dev (2018-07-20 trunk 64005) +JIT [x86_64-linux]
+  r64007: ruby 2.6.0dev (2018-07-21 trunk 64007) [x86_64-linux]
+  r64007 --jit: ruby 2.6.0dev (2018-07-21 trunk 64007) +JIT [x86_64-linux]
