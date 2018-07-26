@@ -971,6 +971,8 @@ results:
     r64062 --jit: 11424437.437
     r64064: 11881564.99
     r64064 --jit: 11446581.804
+    r64068: 11729567.855
+    r64068 --jit: 10907382.025
   String#prepend(obj1, obj2,...):
     2.5.0: 4296724.696
     2.6.0-preview1: 4030337.867
@@ -1941,6 +1943,8 @@ results:
     r64062 --jit: 4223961.967
     r64064: 4230016.757
     r64064 --jit: 4204461.101
+    r64068: 4427964.166
+    r64068 --jit: 4225402.872
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -2917,3 +2921,5 @@ descriptions:
   r64062 --jit: ruby 2.6.0dev (2018-07-26 trunk 64062) +JIT [x86_64-linux]
   r64064: ruby 2.6.0dev (2018-07-26 trunk 64064) [x86_64-linux]
   r64064 --jit: ruby 2.6.0dev (2018-07-26 trunk 64064) +JIT [x86_64-linux]
+  r64068: ruby 2.6.0dev (2018-07-26 trunk 64068) [x86_64-linux]
+  r64068 --jit: ruby 2.6.0dev (2018-07-26 trunk 64068) +JIT [x86_64-linux]
