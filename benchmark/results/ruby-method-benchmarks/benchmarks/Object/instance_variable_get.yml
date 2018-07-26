@@ -76,6 +76,8 @@ results:
     r62208 --jit: 11139216.212
     r62220: 13992536.231
     r62220 --jit: 12846683.352
+    r62231: 12708316.813
+    r62231 --jit: 12776548.987
   Object#instance_variable_get(defined_symbol):
     2.0.0-p648: 44127517.61
     2.1.10: 43084508.34
@@ -151,6 +153,8 @@ results:
     r62208 --jit: 42128039.563
     r62220: 43936776.586
     r62220 --jit: 42363655.757
+    r62231: 43822482.033
+    r62231 --jit: 42107347.422
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -226,3 +230,5 @@ descriptions:
   r62208 --jit: ruby 2.6.0dev (2018-02-05 trunk 62208) [x86_64-linux]
   r62220: ruby 2.6.0dev (2018-02-05 trunk 62220) [x86_64-linux]
   r62220 --jit: ruby 2.6.0dev (2018-02-05 trunk 62220) [x86_64-linux]
+  r62231: ruby 2.6.0dev (2018-02-05 trunk 62231) [x86_64-linux]
+  r62231 --jit: ruby 2.6.0dev (2018-02-05 trunk 62231) [x86_64-linux]
