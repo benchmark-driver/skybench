@@ -970,6 +970,8 @@ results:
     r64112 --jit: 503014.867
     r64116: 530758.977
     r64116 --jit: 503553.757
+    r64123: 535384.937
+    r64123 --jit: 498869.983
   Time.mktime(sec, min, hour, mday, mon, year, wday, yday, isdst, zone):
     2.0.0-p648: 233868.277
     2.1.10: 230757.005
@@ -1939,6 +1941,8 @@ results:
     r64112 --jit: 502563.536
     r64116: 510875.071
     r64116 --jit: 485570.782
+    r64123: 536819.712
+    r64123 --jit: 499341.814
   Time.local(year, month, day, hour, min, sec, usec_with_frac):
     2.0.0-p648: 236763.826
     2.1.10: 234859.588
@@ -2908,6 +2912,8 @@ results:
     r64112 --jit: 505639.003
     r64116: 534798.36
     r64116 --jit: 479872.517
+    r64123: 541113.256
+    r64123 --jit: 486231.783
   Time.local(sec, min, hour, mday, mon, year, wday, yday, isdst, zone):
     2.0.0-p648: 234387.656
     2.1.10: 230627.461
@@ -3877,6 +3883,8 @@ results:
     r64112 --jit: 503276.607
     r64116: 537518.297
     r64116 --jit: 492205.752
+    r64123: 528330.935
+    r64123 --jit: 504886.118
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -4846,3 +4854,5 @@ descriptions:
   r64112 --jit: ruby 2.6.0dev (2018-07-30 trunk 64112) +JIT [x86_64-linux]
   r64116: ruby 2.6.0dev (2018-07-30 trunk 64116) [x86_64-linux]
   r64116 --jit: ruby 2.6.0dev (2018-07-30 trunk 64116) +JIT [x86_64-linux]
+  r64123: ruby 2.6.0dev (2018-07-30 trunk 64123) [x86_64-linux]
+  r64123 --jit: ruby 2.6.0dev (2018-07-30 trunk 64123) +JIT [x86_64-linux]
