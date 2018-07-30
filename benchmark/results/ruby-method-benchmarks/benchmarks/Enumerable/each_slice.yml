@@ -978,6 +978,8 @@ results:
     r64124 --jit: 7126751.361
     r64132: 8672035.307
     r64132 --jit: 7123997.417
+    r64133: 8772628.744
+    r64133 --jit: 7171043.349
   Enumerable#each_slice(n) { |obj| ...}:
     2.0.0-p648: 237057.329
     2.1.10: 219525.68
@@ -1955,6 +1957,8 @@ results:
     r64124 --jit: 230399.927
     r64132: 261730.425
     r64132 --jit: 227998.132
+    r64133: 260002.64
+    r64133 --jit: 229998.901
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -2932,3 +2936,5 @@ descriptions:
   r64122 --jit: ruby 2.6.0dev (2018-07-30 trunk 64122) +JIT [x86_64-linux]
   r64132: ruby 2.6.0dev (2018-07-31 trunk 64132) [x86_64-linux]
   r64132 --jit: ruby 2.6.0dev (2018-07-31 trunk 64132) +JIT [x86_64-linux]
+  r64133: ruby 2.6.0dev (2018-07-31 trunk 64133) [x86_64-linux]
+  r64133 --jit: ruby 2.6.0dev (2018-07-31 trunk 64133) +JIT [x86_64-linux]

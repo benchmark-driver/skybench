@@ -160,6 +160,8 @@ results:
     r62733 --jit: 8085750.55
     r62744: 8898359.222
     r62744 --jit: 8077391.767
+    r62755: 8794471.194
+    r62755 --jit: 8534018.428
   Object#remove_instance_variable(string):
     2.0.0-p648: 4606184.04
     2.1.10: 4584569.178
@@ -319,6 +321,8 @@ results:
     r62733 --jit: 5598326.018
     r62744: 5820967.583
     r62744 --jit: 5192273.893
+    r62755: 5783944.663
+    r62755 --jit: 5540872.188
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -478,3 +482,5 @@ descriptions:
   r62733 --jit: ruby 2.6.0dev (2018-03-13 trunk 62733) +JIT [x86_64-linux]
   r62744: ruby 2.6.0dev (2018-03-13 trunk 62744) [x86_64-linux]
   r62744 --jit: ruby 2.6.0dev (2018-03-13 trunk 62744) +JIT [x86_64-linux]
+  r62755: ruby 2.6.0dev (2018-03-15 trunk 62755) [x86_64-linux]
+  r62755 --jit: ruby 2.6.0dev (2018-03-15 trunk 62755) +JIT [x86_64-linux]
