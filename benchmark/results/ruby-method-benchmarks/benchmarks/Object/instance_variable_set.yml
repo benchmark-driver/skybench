@@ -184,6 +184,8 @@ results:
     r62956 --jit: 37029753.347
     r62967: 37080524.969
     r62967 --jit: 37143939.997
+    r63031: 37652373.124
+    r63031 --jit: 34154651.279
   Object#instance_variable_set(string, obj):
     2.0.0-p648: 10175652.93
     2.1.10: 8834967.294
@@ -367,6 +369,8 @@ results:
     r62956 --jit: 13715329.141
     r62967: 14264483.086
     r62967 --jit: 12335993.908
+    r63031: 13914803.459
+    r63031 --jit: 12015847.691
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -550,3 +554,5 @@ descriptions:
   r62956 --jit: ruby 2.6.0dev (2018-03-28 trunk 62956) +JIT [x86_64-linux]
   r62967: ruby 2.6.0dev (2018-03-28 trunk 62967) [x86_64-linux]
   r62967 --jit: ruby 2.6.0dev (2018-03-28 trunk 62967) +JIT [x86_64-linux]
+  r63031: ruby 2.6.0dev (2018-03-29 trunk 63031) [x86_64-linux]
+  r63031 --jit: ruby 2.6.0dev (2018-03-29 trunk 63031) +JIT [x86_64-linux]
