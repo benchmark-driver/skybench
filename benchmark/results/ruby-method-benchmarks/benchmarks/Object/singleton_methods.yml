@@ -270,6 +270,8 @@ results:
     r63489 --jit: 4020762.224
     r63500: 4148760.147
     r63500 --jit: 3714434.122
+    r63511: 4156706.03
+    r63511 --jit: 3977130.648
   Object#singleton_methods(false):
     2.0.0-p648: 6147623.217
     2.1.10: 5534762.765
@@ -539,6 +541,8 @@ results:
     r63489 --jit: 5312508.654
     r63500: 5571309.27
     r63500 --jit: 5276542.486
+    r63511: 5575232.617
+    r63511 --jit: 5276322.175
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -808,3 +812,5 @@ descriptions:
   r63489 --jit: ruby 2.6.0dev (2018-05-22 trunk 63489) +JIT [x86_64-linux]
   r63500: ruby 2.6.0dev (2018-05-24 trunk 63500) [x86_64-linux]
   r63500 --jit: ruby 2.6.0dev (2018-05-24 trunk 63500) +JIT [x86_64-linux]
+  r63511: ruby 2.6.0dev (2018-05-28 trunk 63511) [x86_64-linux]
+  r63511 --jit: ruby 2.6.0dev (2018-05-28 trunk 63511) +JIT [x86_64-linux]
