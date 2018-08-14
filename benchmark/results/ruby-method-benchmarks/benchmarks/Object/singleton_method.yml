@@ -336,6 +336,8 @@ results:
     r63871 --jit: 7969589.22
     r63882: 8449220.072
     r63882 --jit: 7848975.352
+    r63893: 8279072.011
+    r63893 --jit: 8055110.578
   Object#singleton_method(string):
     2.1.10: 2979261.562
     2.2.9: 2901856.884
@@ -671,6 +673,8 @@ results:
     r63871 --jit: 5650766.2
     r63882: 6010193.73
     r63882 --jit: 5644965.351
+    r63893: 5501795.695
+    r63893 --jit: 5708625.662
 descriptions:
   r61465: ruby 2.5.0dev (2017-12-25 trunk 61465) [x86_64-linux]
   r61479: ruby 2.6.0dev (2017-12-26 trunk 61479) [x86_64-linux]
@@ -1006,3 +1010,5 @@ descriptions:
   r63871 --jit: ruby 2.6.0dev (2018-07-06 trunk 63871) +JIT [x86_64-linux]
   r63882: ruby 2.6.0dev (2018-07-08 trunk 63882) [x86_64-linux]
   r63882 --jit: ruby 2.6.0dev (2018-07-08 trunk 63882) +JIT [x86_64-linux]
+  r63893: ruby 2.6.0dev (2018-07-09 trunk 63893) [x86_64-linux]
+  r63893 --jit: ruby 2.6.0dev (2018-07-09 trunk 63893) +JIT [x86_64-linux]
