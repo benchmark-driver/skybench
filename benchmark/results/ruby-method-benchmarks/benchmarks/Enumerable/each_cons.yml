@@ -1159,6 +1159,8 @@ results:
     r64359 --jit: 7014414.79
     r64360: 8732636.948
     r64360 --jit: 7031567.517
+    r64361: 8553511.713
+    r64361 --jit: 6959054.846
   Enumerable#each_cons(n) { |obj| ...}:
     2.0.0-p648: 80623.491
     2.1.10: 75153.243
@@ -2317,6 +2319,8 @@ results:
     r64359 --jit: 72097.304
     r64360: 85252.896
     r64360 --jit: 70499.682
+    r64361: 85398.7
+    r64361 --jit: 72603.121
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -3475,3 +3479,5 @@ descriptions:
   r64360 --jit: ruby 2.6.0dev (2018-08-15 trunk 64360) +JIT [x86_64-linux]
   r64359: ruby 2.6.0dev (2018-08-14 trunk 64359) [x86_64-linux]
   r64359 --jit: ruby 2.6.0dev (2018-08-14 trunk 64359) +JIT [x86_64-linux]
+  r64361: ruby 2.6.0dev (2018-08-15 trunk 64361) [x86_64-linux]
+  r64361 --jit: ruby 2.6.0dev (2018-08-15 trunk 64361) +JIT [x86_64-linux]
