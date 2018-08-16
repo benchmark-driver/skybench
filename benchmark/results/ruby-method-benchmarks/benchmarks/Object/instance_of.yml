@@ -372,6 +372,8 @@ results:
     r64068 --jit: 53716721.533
     r64079: 73175900.62
     r64079 --jit: 68842532.649
+    r64090: 69365637.287
+    r64090 --jit: 68596458.25
   Object#instance_of?(other_class):
     2.0.0-p648: 72089719.956
     2.1.10: 69083796.129
@@ -743,6 +745,8 @@ results:
     r64068 --jit: 67548282.187
     r64079: 71433483.331
     r64079 --jit: 68441765.01
+    r64090: 69315888.079
+    r64090 --jit: 66827374.855
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -1114,3 +1118,5 @@ descriptions:
   r64068 --jit: ruby 2.6.0dev (2018-07-26 trunk 64068) +JIT [x86_64-linux]
   r64079: ruby 2.6.0dev (2018-07-27 trunk 64079) [x86_64-linux]
   r64079 --jit: ruby 2.6.0dev (2018-07-27 trunk 64079) +JIT [x86_64-linux]
+  r64090: ruby 2.6.0dev (2018-07-28 trunk 64090) [x86_64-linux]
+  r64090 --jit: ruby 2.6.0dev (2018-07-28 trunk 64090) +JIT [x86_64-linux]
