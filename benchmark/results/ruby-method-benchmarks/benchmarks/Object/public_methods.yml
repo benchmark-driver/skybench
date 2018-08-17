@@ -380,6 +380,8 @@ results:
     r64112 --jit: 145667.103
     r64123: 162482.145
     r64123 --jit: 145362.352
+    r64140: 163483.696
+    r64140 --jit: 148778.236
   Object#public_methods(false):
     2.0.0-p648: 7258512.294
     2.1.10: 6169254.128
@@ -759,6 +761,8 @@ results:
     r64112 --jit: 5476014.557
     r64123: 7460284.429
     r64123 --jit: 5244103.837
+    r64140: 7551773.615
+    r64140 --jit: 5444651.675
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -1138,3 +1142,5 @@ descriptions:
   r64112 --jit: ruby 2.6.0dev (2018-07-30 trunk 64112) +JIT [x86_64-linux]
   r64123: ruby 2.6.0dev (2018-07-30 trunk 64123) [x86_64-linux]
   r64123 --jit: ruby 2.6.0dev (2018-07-30 trunk 64123) +JIT [x86_64-linux]
+  r64140: ruby 2.6.0dev (2018-07-31 trunk 64140) [x86_64-linux]
+  r64140 --jit: ruby 2.6.0dev (2018-07-31 trunk 64140) +JIT [x86_64-linux]
