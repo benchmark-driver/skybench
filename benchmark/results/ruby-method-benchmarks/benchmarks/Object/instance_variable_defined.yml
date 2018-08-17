@@ -384,6 +384,8 @@ results:
     r64140 --jit: 13330433.268
     r64155: 13502103.763
     r64155 --jit: 13629932.47
+    r64166: 13617472.753
+    r64166 --jit: 13652956.902
   Object#instance_variable_defined?(undefined_string):
     2.0.0-p648: 9131599.307
     2.1.10: 9554736.293
@@ -767,6 +769,8 @@ results:
     r64140 --jit: 13914063.708
     r64155: 15154145.921
     r64155 --jit: 15004142.95
+    r64166: 14699562.497
+    r64166 --jit: 15617665.564
   Object#instance_variable_defined?(defined_symbol):
     2.0.0-p648: 43132552.316
     2.1.10: 41599859.841
@@ -1150,6 +1154,8 @@ results:
     r64140 --jit: 40187367.182
     r64155: 39143738.088
     r64155 --jit: 40173286.314
+    r64166: 39760919.383
+    r64166 --jit: 36750231.778
   Object#instance_variable_defined?(undefined_symbol):
     2.0.0-p648: 45288056.462
     2.1.10: 44949239.667
@@ -1533,6 +1539,8 @@ results:
     r64140 --jit: 45369391.563
     r64155: 47430657.64
     r64155 --jit: 45063231.496
+    r64166: 43817072.853
+    r64166 --jit: 44374871.947
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -1916,3 +1924,5 @@ descriptions:
   r64140 --jit: ruby 2.6.0dev (2018-07-31 trunk 64140) +JIT [x86_64-linux]
   r64155: ruby 2.6.0dev (2018-08-01 trunk 64155) [x86_64-linux]
   r64155 --jit: ruby 2.6.0dev (2018-08-01 trunk 64155) +JIT [x86_64-linux]
+  r64166: ruby 2.6.0dev (2018-08-03 trunk 64166) [x86_64-linux]
+  r64166 --jit: ruby 2.6.0dev (2018-08-03 trunk 64166) +JIT [x86_64-linux]
