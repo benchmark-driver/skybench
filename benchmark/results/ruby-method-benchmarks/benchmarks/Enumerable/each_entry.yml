@@ -1196,6 +1196,8 @@ results:
     r64397 --jit: 8750936.922
     r64398: 11049053.18
     r64398 --jit: 8631107.695
+    r64399: 11327413.14
+    r64399 --jit: 8763065.279
   Enumerable#each_entry { |obj| ...}:
     2.0.0-p648: 292483.82
     2.1.10: 269998.939
@@ -2391,6 +2393,8 @@ results:
     r64397 --jit: 284735.819
     r64398: 269443.276
     r64398 --jit: 271344.773
+    r64399: 268332.713
+    r64399 --jit: 281408.336
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -3586,3 +3590,5 @@ descriptions:
   r64396 --jit: ruby 2.6.0dev (2018-08-17 trunk 64396) +JIT [x86_64-linux]
   r64398: ruby 2.6.0dev (2018-08-17 trunk 64398) [x86_64-linux]
   r64398 --jit: ruby 2.6.0dev (2018-08-17 trunk 64398) +JIT [x86_64-linux]
+  r64399: ruby 2.6.0dev (2018-08-17 trunk 64399) [x86_64-linux]
+  r64399 --jit: ruby 2.6.0dev (2018-08-17 trunk 64399) +JIT [x86_64-linux]
