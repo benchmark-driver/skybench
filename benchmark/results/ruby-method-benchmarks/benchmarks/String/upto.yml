@@ -1216,6 +1216,8 @@ results:
     r64417 --jit: 653494.082
     r64423: 663477.945
     r64423 --jit: 654620.201
+    r64429: 652863.871
+    r64429 --jit: 646213.087
   String#upto(max, exclusive):
     2.0.0-p648: 666634.461
     2.1.10: 664624.998
@@ -2431,6 +2433,8 @@ results:
     r64417 --jit: 675661.958
     r64423: 686910.953
     r64423 --jit: 677166.888
+    r64429: 686969.069
+    r64429 --jit: 670908.716
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -3646,3 +3650,5 @@ descriptions:
   r64414 --jit: ruby 2.6.0dev (2018-08-17 trunk 64414) +JIT [x86_64-linux]
   r64423: ruby 2.6.0dev (2018-08-18 trunk 64423) [x86_64-linux]
   r64423 --jit: ruby 2.6.0dev (2018-08-18 trunk 64423) +JIT [x86_64-linux]
+  r64429: ruby 2.6.0dev (2018-08-18 trunk 64429) [x86_64-linux]
+  r64429 --jit: ruby 2.6.0dev (2018-08-18 trunk 64429) +JIT [x86_64-linux]
