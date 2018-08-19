@@ -412,6 +412,8 @@ results:
     r64299 --jit: 177782.323
     r64310: 183886.804
     r64310 --jit: 180271.57
+    r64323: 184892.648
+    r64323 --jit: 179200.248
   Object#protected_methods(false):
     2.0.0-p648: 7236853.938
     2.1.10: 6127973.639
@@ -823,6 +825,8 @@ results:
     r64299 --jit: 5466361.773
     r64310: 5673752.499
     r64310 --jit: 5433638.795
+    r64323: 5654083.827
+    r64323 --jit: 5345635.158
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -1234,3 +1238,5 @@ descriptions:
   r64299 --jit: ruby 2.6.0dev (2018-08-11 trunk 64299) +JIT [x86_64-linux]
   r64310: ruby 2.6.0dev (2018-08-12 trunk 64310) [x86_64-linux]
   r64310 --jit: ruby 2.6.0dev (2018-08-12 trunk 64310) +JIT [x86_64-linux]
+  r64323: ruby 2.6.0dev (2018-08-12 trunk 64323) [x86_64-linux]
+  r64323 --jit: ruby 2.6.0dev (2018-08-12 trunk 64323) +JIT [x86_64-linux]
