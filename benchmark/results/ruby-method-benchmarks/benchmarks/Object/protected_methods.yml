@@ -438,6 +438,8 @@ results:
     r64460 --jit: 178998.298
     r64471: 196588.322
     r64471 --jit: 177934.862
+    r64478: 198719.486
+    r64478 --jit: 180145.277
     r64479: 196596.726
     r64479 --jit: 174736.732
   Object#protected_methods(false):
@@ -877,6 +879,8 @@ results:
     r64460 --jit: 5445417.974
     r64471: 7601328.284
     r64471 --jit: 5121363.753
+    r64478: 7593126.969
+    r64478 --jit: 5464706.706
     r64479: 7578685.09
     r64479 --jit: 5463055.053
 descriptions:
@@ -1318,3 +1322,5 @@ descriptions:
   r64471 --jit: ruby 2.6.0dev (2018-08-19 trunk 64471) +JIT [x86_64-linux]
   r64479: ruby 2.6.0dev (2018-08-20 trunk 64479) [x86_64-linux]
   r64479 --jit: ruby 2.6.0dev (2018-08-20 trunk 64479) +JIT [x86_64-linux]
+  r64478: ruby 2.6.0dev (2018-08-20 trunk 64478) [x86_64-linux]
+  r64478 --jit: ruby 2.6.0dev (2018-08-20 trunk 64478) +JIT [x86_64-linux]
