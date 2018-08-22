@@ -1298,6 +1298,8 @@ results:
     r64508 --jit: 7361930.033
     r64509: 7512185.683
     r64509 --jit: 7462972.698
+    r64512: 7508049.779
+    r64512 --jit: 7739539.359
   Hash#values_at(Keys) with default:
     2.0.0-p648: 6134865.5
     2.1.10: 6551091.422
@@ -2595,6 +2597,8 @@ results:
     r64508 --jit: 8122363.974
     r64509: 7927785.442
     r64509 --jit: 7804875.099
+    r64512: 8291530.689
+    r64512 --jit: 8117877.023
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -3892,3 +3896,5 @@ descriptions:
   r64509 --jit: ruby 2.6.0dev (2018-08-22 trunk 64509) +JIT [x86_64-linux]
   r64508: ruby 2.6.0dev (2018-08-22 trunk 64508) [x86_64-linux]
   r64508 --jit: ruby 2.6.0dev (2018-08-22 trunk 64508) +JIT [x86_64-linux]
+  r64512: ruby 2.6.0dev (2018-08-23 trunk 64512) [x86_64-linux]
+  r64512 --jit: ruby 2.6.0dev (2018-08-23 trunk 64512) +JIT [x86_64-linux]
