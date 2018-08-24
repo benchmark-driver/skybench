@@ -500,6 +500,8 @@ results:
     r64520 --jit: 176883.749
     r64521: 198945.231
     r64521 --jit: 179779.93
+    r64523: 197250.131
+    r64523 --jit: 178259.805
     r64524: 195965.4
     r64524 --jit: 179213.085
   Object#protected_methods(false):
@@ -1001,6 +1003,8 @@ results:
     r64520 --jit: 5345364.255
     r64521: 7584332.745
     r64521 --jit: 5441669.865
+    r64523: 7551819.144
+    r64523 --jit: 5452267.77
     r64524: 7620801.414
     r64524 --jit: 5446089.443
 descriptions:
@@ -1504,3 +1508,5 @@ descriptions:
   r64518 --jit: ruby 2.6.0dev (2018-08-23 trunk 64518) +JIT [x86_64-linux]
   r64524: ruby 2.6.0dev (2018-08-24 trunk 64524) [x86_64-linux]
   r64524 --jit: ruby 2.6.0dev (2018-08-24 trunk 64524) +JIT [x86_64-linux]
+  r64523: ruby 2.6.0dev (2018-08-24 trunk 64523) [x86_64-linux]
+  r64523 --jit: ruby 2.6.0dev (2018-08-24 trunk 64523) +JIT [x86_64-linux]
