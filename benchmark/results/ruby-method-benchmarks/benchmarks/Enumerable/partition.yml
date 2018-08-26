@@ -1367,6 +1367,8 @@ results:
     r64540 --jit: 8339856.049
     r64541: 11045409.093
     r64541 --jit: 8686149.286
+    r64542: 11085155.366
+    r64542 --jit: 8225339.513
   Enumerable#partition { |obj| ...}:
     2.0.0-p648: 160035.917
     2.1.10: 163698.073
@@ -2733,6 +2735,8 @@ results:
     r64540 --jit: 173004.966
     r64541: 169007.86
     r64541 --jit: 171831.603
+    r64542: 167775.383
+    r64542 --jit: 172037.934
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -4099,3 +4103,5 @@ descriptions:
   r64537 --jit: ruby 2.6.0dev (2018-08-26 trunk 64537) +JIT [x86_64-linux]
   r64536: ruby 2.6.0dev (2018-08-25 trunk 64536) [x86_64-linux]
   r64536 --jit: ruby 2.6.0dev (2018-08-25 trunk 64536) +JIT [x86_64-linux]
+  r64542: ruby 2.6.0dev (2018-08-26 trunk 64542) [x86_64-linux]
+  r64542 --jit: ruby 2.6.0dev (2018-08-26 trunk 64542) +JIT [x86_64-linux]
