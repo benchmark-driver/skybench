@@ -1425,6 +1425,8 @@ results:
     r64534 --jit: 1154085.224
     r64535: 1445956.388
     r64535 --jit: 1156731.405
+    r64540: 1432524.685
+    r64540 --jit: 1154004.979
   Enumerable#chunk_while { |obj| false }:
     2.5.0: 1175872.307
     2.6.0-preview1: 1143374.657
@@ -2849,6 +2851,8 @@ results:
     r64534 --jit: 1107425.798
     r64535: 1443653.045
     r64535 --jit: 1155057.371
+    r64540: 1424270.157
+    r64540 --jit: 1140378.843
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -4279,3 +4283,5 @@ descriptions:
   r64527 --jit: ruby 2.6.0dev (2018-08-24 trunk 64527) +JIT [x86_64-linux]
   r64503: ruby 2.6.0dev (2018-08-22 trunk 64503) [x86_64-linux]
   r64503 --jit: ruby 2.6.0dev (2018-08-22 trunk 64503) +JIT [x86_64-linux]
+  r64540: ruby 2.6.0dev (2018-08-26 trunk 64540) [x86_64-linux]
+  r64540 --jit: ruby 2.6.0dev (2018-08-26 trunk 64540) +JIT [x86_64-linux]
