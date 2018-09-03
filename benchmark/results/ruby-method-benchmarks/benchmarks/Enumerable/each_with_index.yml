@@ -1501,6 +1501,8 @@ results:
     r64614 --jit: 8699439.691
     r64615: 11296548.522
     r64615 --jit: 8615031.548
+    r64618: 11329192.839
+    r64618 --jit: 8605525.478
     r64619: 11285386.18
     r64619 --jit: 8669714.83
   Enumerable#each_with_index { |obj, index| ...}:
@@ -3003,6 +3005,8 @@ results:
     r64614 --jit: 243061.274
     r64615: 230275.768
     r64615 --jit: 243821.39
+    r64618: 233468.723
+    r64618 --jit: 241078.468
     r64619: 232298.084
     r64619 --jit: 243208.593
 descriptions:
@@ -4507,3 +4511,5 @@ descriptions:
   r64484 --jit: ruby 2.6.0dev (2018-08-21 trunk 64484) +JIT [x86_64-linux]
   r64619: ruby 2.6.0dev (2018-09-03 trunk 64619) [x86_64-linux]
   r64619 --jit: ruby 2.6.0dev (2018-09-03 trunk 64619) +JIT [x86_64-linux]
+  r64618: ruby 2.6.0dev (2018-09-02 trunk 64618) [x86_64-linux]
+  r64618 --jit: ruby 2.6.0dev (2018-09-02 trunk 64618) +JIT [x86_64-linux]
