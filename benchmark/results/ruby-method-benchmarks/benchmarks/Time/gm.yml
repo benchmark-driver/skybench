@@ -1542,6 +1542,8 @@ results:
     r64633 --jit: 2146685.603
     r64634: 2319197.13
     r64634 --jit: 2123587.096
+    r64635: 2341631.058
+    r64635 --jit: 2132782.371
   Time.gm(sec, min, hour, mday, mon, year, wday, yday, isdst, zone):
     2.0.0-p648: 375789.188
     2.1.10: 357126.868
@@ -3083,6 +3085,8 @@ results:
     r64633 --jit: 2118276.014
     r64634: 2234091.258
     r64634 --jit: 2107411.386
+    r64635: 2241394.061
+    r64635 --jit: 2104996.607
   Time.utc(year, month, day, hour, min, sec, usec_with_frac):
     2.0.0-p648: 378112.951
     2.1.10: 372472.13
@@ -4624,6 +4628,8 @@ results:
     r64633 --jit: 2151833.882
     r64634: 2300671.566
     r64634 --jit: 2014118.592
+    r64635: 2325051.046
+    r64635 --jit: 2162456.319
   Time.utc(sec, min, hour, mday, mon, year, wday, yday, isdst, zone):
     2.0.0-p648: 368842.795
     2.1.10: 367423.792
@@ -6165,6 +6171,8 @@ results:
     r64633 --jit: 2095693.665
     r64634: 2265695.469
     r64634 --jit: 2089795.379
+    r64635: 2259495.734
+    r64635 --jit: 2114157.845
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -7706,3 +7714,5 @@ descriptions:
   r64634 --jit: ruby 2.6.0dev (2018-09-05 trunk 64634) +JIT [x86_64-linux]
   r64633: ruby 2.6.0dev (2018-09-04 trunk 64633) [x86_64-linux]
   r64633 --jit: ruby 2.6.0dev (2018-09-04 trunk 64633) +JIT [x86_64-linux]
+  r64635: ruby 2.6.0dev (2018-09-05 trunk 64635) [x86_64-linux]
+  r64635 --jit: ruby 2.6.0dev (2018-09-05 trunk 64635) +JIT [x86_64-linux]
