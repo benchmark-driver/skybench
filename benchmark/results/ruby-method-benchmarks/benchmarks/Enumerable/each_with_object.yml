@@ -1574,6 +1574,8 @@ results:
     r64647 --jit: 6294172.474
     r64648: 7536240.263
     r64648 --jit: 6279556.824
+    r64654: 7508646.465
+    r64654 --jit: 6297005.729
   Enumerable#each_with_object(obj) { |(*args), memo_obj| ...}:
     2.0.0-p648: 161190.612
     2.1.10: 171784.033
@@ -3147,6 +3149,8 @@ results:
     r64647 --jit: 193891.902
     r64648: 176816.416
     r64648 --jit: 193900.35
+    r64654: 177791.971
+    r64654 --jit: 195742.656
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -4720,3 +4724,5 @@ descriptions:
   r64637 --jit: ruby 2.6.0dev (2018-09-05 trunk 64637) +JIT [x86_64-linux]
   r64636: ruby 2.6.0dev (2018-09-05 trunk 64636) [x86_64-linux]
   r64636 --jit: ruby 2.6.0dev (2018-09-05 trunk 64636) +JIT [x86_64-linux]
+  r64654: ruby 2.6.0dev (2018-09-07 trunk 64654) [x86_64-linux]
+  r64654 --jit: ruby 2.6.0dev (2018-09-07 trunk 64654) +JIT [x86_64-linux]
