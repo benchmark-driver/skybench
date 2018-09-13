@@ -6,6 +6,7 @@ require 'yaml'
 definition_dir = File.expand_path('benchmark/definitions', __dir__)
 repeat_count_by_pattern = {
   'mjit-benchmarks/benchmarks/*.yml' => 1,
+  'optcarrot/benchmark.yml' => 4,
   'ruby-method-benchmarks/benchmarks/**/*.yml' => 1,
 }
 release_versions = [
