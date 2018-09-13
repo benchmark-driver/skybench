@@ -2,6 +2,7 @@
   results = [
     { name: 'Ruby Method', prefix: 'ruby_method', description: 'Ruby method benchmark set created by Watson1978', categories: %w[Array Enumerable Hash Object Range String Time] },
     { name: 'MJIT',        prefix: 'mjit',        description: 'Benchmark set created by Vladimir Makarov' },
+    { name: 'Optcarrot',   prefix: 'optcarrot',   description: 'Benchmark created by Yusuke Endoh' },
   ]
 - results.each do |definition|
   %h2.text-center= definition.fetch(:name)
