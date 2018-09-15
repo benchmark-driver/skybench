@@ -641,8 +641,8 @@ results:
     2.5.0: 44.658
     2.6.0-preview1: 47.324
     2.6.0-preview1 --jit: 51.807
-    r63744: 46.568
-    r63744 --jit: 65.543
+    r63744: 46.839
+    r63744 --jit: 64.426
     r63755: 47.135
     r63755 --jit: 66.248
     r63766: 47.976
@@ -663,6 +663,8 @@ results:
     r63900 --jit: 60.227
     r63911: 47.58
     r63911 --jit: 60.718
+    r63922: 48.084
+    r63922 --jit: 60.113
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -1316,3 +1318,5 @@ descriptions:
   r63900 --jit: ruby 2.6.0dev (2018-07-09 trunk 63900) +JIT [x86_64-linux]
   r63911: ruby 2.6.0dev (2018-07-09 trunk 63911) [x86_64-linux]
   r63911 --jit: ruby 2.6.0dev (2018-07-09 trunk 63911) +JIT [x86_64-linux]
+  r63922: ruby 2.6.0dev (2018-07-10 trunk 63922) [x86_64-linux]
+  r63922 --jit: ruby 2.6.0dev (2018-07-10 trunk 63922) +JIT [x86_64-linux]

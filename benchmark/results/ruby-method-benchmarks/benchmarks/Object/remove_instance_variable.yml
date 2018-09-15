@@ -898,6 +898,8 @@ results:
     r64742 --jit: 7572287.965
     r64743: 7997627.923
     r64743 --jit: 7776781.473
+    r64745: 8017986.179
+    r64745 --jit: 7819566.181
     r64746: 7928904.328
     r64746 --jit: 7699317.449
   Object#remove_instance_variable(string):
@@ -1797,6 +1799,8 @@ results:
     r64742 --jit: 5245122.859
     r64743: 5556518.704
     r64743 --jit: 5153310.999
+    r64745: 5376711.685
+    r64745 --jit: 5317236.211
     r64746: 5270174.472
     r64746 --jit: 5308858.155
 descriptions:
@@ -2698,3 +2702,5 @@ descriptions:
   r64738 --jit: ruby 2.6.0dev (2018-09-14 trunk 64738) +JIT [x86_64-linux]
   r64746: ruby 2.6.0dev (2018-09-15 trunk 64746) [x86_64-linux]
   r64746 --jit: ruby 2.6.0dev (2018-09-15 trunk 64746) +JIT [x86_64-linux]
+  r64745: ruby 2.6.0dev (2018-09-14 trunk 64745) [x86_64-linux]
+  r64745 --jit: ruby 2.6.0dev (2018-09-14 trunk 64745) +JIT [x86_64-linux]
