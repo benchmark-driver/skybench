@@ -641,8 +641,8 @@ results:
     2.5.0: 44.658
     2.6.0-preview1: 47.324
     2.6.0-preview1 --jit: 51.807
-    r63744: 47.119
-    r63744 --jit: 64.727
+    r63744: 47.071
+    r63744 --jit: 65.333
     r63755: 47.135
     r63755 --jit: 66.248
     r63766: 47.976
@@ -703,6 +703,8 @@ results:
     r64120 --jit: 64.551
     r64137: 47.095
     r64137 --jit: 64.729
+    r64152: 46.203
+    r64152 --jit: 63.446
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -1396,3 +1398,5 @@ descriptions:
   r64120 --jit: ruby 2.6.0dev (2018-07-30 trunk 64120) +JIT [x86_64-linux]
   r64137: ruby 2.6.0dev (2018-07-31 trunk 64137) [x86_64-linux]
   r64137 --jit: ruby 2.6.0dev (2018-07-31 trunk 64137) +JIT [x86_64-linux]
+  r64152: ruby 2.6.0dev (2018-08-01 trunk 64152) [x86_64-linux]
+  r64152 --jit: ruby 2.6.0dev (2018-08-01 trunk 64152) +JIT [x86_64-linux]
