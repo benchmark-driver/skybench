@@ -1881,6 +1881,8 @@ results:
     r64795 --jit: 7089925.181
     r64796: 7417912.79
     r64796 --jit: 7064920.536
+    r64798: 7467227.911
+    r64798 --jit: 7103530.817
   Hash#fetch_values(key, ...) { |key| ...}:
     2.5.0: 6026490.323
     2.6.0-preview1: 5616155.263
@@ -3761,6 +3763,8 @@ results:
     r64795 --jit: 6183268.828
     r64796: 5740955.019
     r64796 --jit: 6059626.217
+    r64798: 5979421.683
+    r64798 --jit: 6215657.28
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -5647,3 +5651,5 @@ descriptions:
   r64794 --jit: ruby 2.6.0dev (2018-09-20 trunk 64794) +JIT [x86_64-linux]
   r64793: ruby 2.6.0dev (2018-09-20 trunk 64793) [x86_64-linux]
   r64793 --jit: ruby 2.6.0dev (2018-09-20 trunk 64793) +JIT [x86_64-linux]
+  r64798: ruby 2.6.0dev (2018-09-21 trunk 64798) [x86_64-linux]
+  r64798 --jit: ruby 2.6.0dev (2018-09-21 trunk 64798) +JIT [x86_64-linux]
