@@ -1144,6 +1144,8 @@ results:
     r64886 --jit: 13046769.663
     r64887: 13629374.281
     r64887 --jit: 13083010.966
+    r64888: 13658951.493
+    r64888 --jit: 13114972.79
     r64889: 13495169.592
     r64889 --jit: 13286862.166
   Object#instance_variable_defined?(undefined_string):
@@ -2289,6 +2291,8 @@ results:
     r64886 --jit: 14789465.4
     r64887: 14970499.11
     r64887 --jit: 14804582.055
+    r64888: 15098931.793
+    r64888 --jit: 14758233.611
     r64889: 13147226.021
     r64889 --jit: 14822085.656
   Object#instance_variable_defined?(defined_symbol):
@@ -3434,6 +3438,8 @@ results:
     r64886 --jit: 38473886.354
     r64887: 39999927.835
     r64887 --jit: 37128192.788
+    r64888: 38082875.511
+    r64888 --jit: 38714777.181
     r64889: 29898382.008
     r64889 --jit: 38304215.106
   Object#instance_variable_defined?(undefined_symbol):
@@ -4579,6 +4585,8 @@ results:
     r64886 --jit: 40385355.393
     r64887: 42503669.347
     r64887 --jit: 40283219.99
+    r64888: 42644561.862
+    r64888 --jit: 40828052.406
     r64889: 42912747.95
     r64889 --jit: 40712238.336
 descriptions:
@@ -5726,3 +5734,5 @@ descriptions:
   r64885 --jit: ruby 2.6.0dev (2018-09-29 trunk 64885) +JIT [x86_64-linux]
   r64889: ruby 2.6.0dev (2018-09-30 trunk 64889) [x86_64-linux]
   r64889 --jit: ruby 2.6.0dev (2018-09-30 trunk 64889) +JIT [x86_64-linux]
+  r64888: ruby 2.6.0dev (2018-09-30 trunk 64888) [x86_64-linux]
+  r64888 --jit: ruby 2.6.0dev (2018-09-30 trunk 64888) +JIT [x86_64-linux]
