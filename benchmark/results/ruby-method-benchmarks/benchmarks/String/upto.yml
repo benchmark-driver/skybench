@@ -2056,6 +2056,8 @@ results:
     r64920 --jit: 636944.54
     r64922: 536610.866
     r64922 --jit: 634487.927
+    r64923: 646182.6
+    r64923 --jit: 635953.837
     r64924: 645918.188
     r64924 --jit: 635592.446
   String#upto(max, exclusive):
@@ -4113,6 +4115,8 @@ results:
     r64920 --jit: 658466.959
     r64922: 654071.317
     r64922 --jit: 654824.162
+    r64923: 668044.51
+    r64923 --jit: 655514.642
     r64924: 667404.02
     r64924 --jit: 655735.3
 descriptions:
@@ -6172,3 +6176,5 @@ descriptions:
   r64922 --jit: ruby 2.6.0dev (2018-10-05 trunk 64922) +JIT [x86_64-linux]
   r64924: ruby 2.6.0dev (2018-10-05 trunk 64924) [x86_64-linux]
   r64924 --jit: ruby 2.6.0dev (2018-10-05 trunk 64924) +JIT [x86_64-linux]
+  r64923: ruby 2.6.0dev (2018-10-05 trunk 64923) [x86_64-linux]
+  r64923 --jit: ruby 2.6.0dev (2018-10-05 trunk 64923) +JIT [x86_64-linux]
