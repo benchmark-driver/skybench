@@ -2078,6 +2078,8 @@ results:
     r64925 --jit: 4991248.96
     r64926: 5062676.025
     r64926 --jit: 4979791.231
+    r64928: 5060088.178
+    r64928 --jit: 4941040.647
   Enumerable#none? { |obj| false }:
     2.0.0-p648: 287674.907
     2.1.10: 275938.31
@@ -4155,6 +4157,8 @@ results:
     r64925 --jit: 253394.117
     r64926: 251328.087
     r64926 --jit: 252831.35
+    r64928: 251162.489
+    r64928 --jit: 255230.12
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -6232,3 +6236,5 @@ descriptions:
   r64696 --jit: ruby 2.6.0dev (2018-09-12 trunk 64696) +JIT [x86_64-linux]
   r64695: ruby 2.6.0dev (2018-09-12 trunk 64695) [x86_64-linux]
   r64695 --jit: ruby 2.6.0dev (2018-09-12 trunk 64695) +JIT [x86_64-linux]
+  r64928: ruby 2.6.0dev (2018-10-07 trunk 64928) [x86_64-linux]
+  r64928 --jit: ruby 2.6.0dev (2018-10-07 trunk 64928) +JIT [x86_64-linux]
