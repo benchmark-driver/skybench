@@ -2191,6 +2191,8 @@ results:
     r64969 --jit: 187615.177
     r64971: 220309.105
     r64971 --jit: 191994.765
+    r64974: 210566.717
+    r64974 --jit: 194150.923
   Enumerable#uniq { |item| ...}:
     2.5.0: 135970.792
     2.6.0-preview1: 123918.513
@@ -4381,6 +4383,8 @@ results:
     r64969 --jit: 120003.82
     r64971: 127151.408
     r64971 --jit: 117879.171
+    r64974: 127721.696
+    r64974 --jit: 120653.666
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -6577,3 +6581,5 @@ descriptions:
   r64967 --jit: ruby 2.6.0dev (2018-10-08 trunk 64967) +JIT [x86_64-linux]
   r64971: ruby 2.6.0dev (2018-10-09 trunk 64971) [x86_64-linux]
   r64971 --jit: ruby 2.6.0dev (2018-10-09 trunk 64971) +JIT [x86_64-linux]
+  r64974: ruby 2.6.0dev (2018-10-09 trunk 64974) [x86_64-linux]
+  r64974 --jit: ruby 2.6.0dev (2018-10-09 trunk 64974) +JIT [x86_64-linux]
