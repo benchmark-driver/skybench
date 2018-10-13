@@ -2261,6 +2261,8 @@ results:
     r65045 --jit: 14872947.248
     r65052: 15729403.664
     r65052 --jit: 15066839.102
+    r65055: 15955005.902
+    r65055 --jit: 15069104.395
   String#casecmp?(other):
     2.5.0: 8186341.37
     2.6.0-preview1: 7541142.044
@@ -4521,6 +4523,8 @@ results:
     r65045 --jit: 7928740.868
     r65052: 8395229.15
     r65052 --jit: 7304191.366
+    r65055: 8331739.665
+    r65055 --jit: 7940619.998
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -6787,3 +6791,5 @@ descriptions:
   r65045 --jit: ruby 2.6.0dev (2018-10-13 trunk 65045) +JIT [x86_64-linux]
   r65052: ruby 2.6.0dev (2018-10-13 trunk 65052) [x86_64-linux]
   r65052 --jit: ruby 2.6.0dev (2018-10-13 trunk 65052) +JIT [x86_64-linux]
+  r65055: ruby 2.6.0dev (2018-10-13 trunk 65055) [x86_64-linux]
+  r65055 --jit: ruby 2.6.0dev (2018-10-13 trunk 65055) +JIT [x86_64-linux]
