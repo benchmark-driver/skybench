@@ -1454,6 +1454,8 @@ results:
     r65121 --jit: 13269434.721
     r65122: 13077537.519
     r65122 --jit: 12923825.75
+    r65131: 13311662.007
+    r65131 --jit: 13095756.718
     r65138: 12778890.557
     r65138 --jit: 12374849.854
   Object#instance_variable_get(defined_symbol):
@@ -2909,6 +2911,8 @@ results:
     r65121 --jit: 35664098.64
     r65122: 41236905.552
     r65122 --jit: 38393534.636
+    r65131: 40904435.822
+    r65131 --jit: 37008525.337
     r65138: 38585270.224
     r65138 --jit: 39468477.46
 descriptions:
@@ -4366,3 +4370,5 @@ descriptions:
   r65122 --jit: ruby 2.6.0dev (2018-10-17 trunk 65122) +JIT [x86_64-linux]
   r65138: ruby 2.6.0dev (2018-10-18 trunk 65138) [x86_64-linux]
   r65138 --jit: ruby 2.6.0dev (2018-10-18 trunk 65138) +JIT [x86_64-linux]
+  r65131: ruby 2.6.0dev (2018-10-18 trunk 65131) [x86_64-linux]
+  r65131 --jit: ruby 2.6.0dev (2018-10-18 trunk 65131) +JIT [x86_64-linux]
