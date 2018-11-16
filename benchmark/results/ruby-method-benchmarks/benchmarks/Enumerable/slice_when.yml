@@ -2867,6 +2867,8 @@ results:
     r65767 --jit: 1115325.607
     r65768: 1444103.609
     r65768 --jit: 1110280.798
+    r65769: 1436572.883
+    r65769 --jit: 1139139.075
   Enumerable#slice_when { |obj| false }:
     2.5.0: 1162923.4
     2.6.0-preview1: 1137029.347
@@ -5733,6 +5735,8 @@ results:
     r65767 --jit: 1131765.898
     r65768: 1392336.792
     r65768 --jit: 1133437.038
+    r65769: 1442254.53
+    r65769 --jit: 1132213.479
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -8605,3 +8609,5 @@ descriptions:
   r65767 --jit: ruby 2.6.0dev (2018-11-16 trunk 65767) +JIT [x86_64-linux]
   r65768: ruby 2.6.0dev (2018-11-16 trunk 65768) [x86_64-linux]
   r65768 --jit: ruby 2.6.0dev (2018-11-16 trunk 65768) +JIT [x86_64-linux]
+  r65769: ruby 2.6.0dev (2018-11-16 trunk 65769) [x86_64-linux]
+  r65769 --jit: ruby 2.6.0dev (2018-11-16 trunk 65769) +JIT [x86_64-linux]
