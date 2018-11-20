@@ -2928,6 +2928,8 @@ results:
     r65812 --jit: 4647291.764
     r65813: 6000070.793
     r65813 --jit: 4660697.412
+    r65818: 6120380.926
+    r65818 --jit: 4588812.655
   Enumerable#minmax_by { |a, b| ...}:
     2.5.0: 61134.377
     2.6.0-preview1: 58717.714
@@ -5855,6 +5857,8 @@ results:
     r65812 --jit: 57066.546
     r65813: 58277.463
     r65813 --jit: 57386.672
+    r65818: 57635.928
+    r65818 --jit: 57001.925
 descriptions:
   2.0.0-p648: ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
   2.1.10: ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]
@@ -8788,3 +8792,5 @@ descriptions:
   r65812 --jit: ruby 2.6.0dev (2018-11-19 trunk 65812) +JIT [x86_64-linux]
   r65811: ruby 2.6.0dev (2018-11-19 trunk 65811) [x86_64-linux]
   r65811 --jit: ruby 2.6.0dev (2018-11-19 trunk 65811) +JIT [x86_64-linux]
+  r65818: ruby 2.6.0dev (2018-11-20 trunk 65818) [x86_64-linux]
+  r65818 --jit: ruby 2.6.0dev (2018-11-20 trunk 65818) +JIT [x86_64-linux]
